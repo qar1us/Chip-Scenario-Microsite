@@ -14,7 +14,8 @@
   --serif: "Source Serif 4", "Source Serif Pro", "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
 
-  --content-width: 640px;
+  --content-width: 1000px;   /* total container width incl. sidenote margin */
+  --reading-width: 680px;    /* used when sidenotes collapse */
   --sidenote-width: 220px;
   --sidenote-gap: 2.25rem;
   --nav-width: 220px;
@@ -44,7 +45,7 @@ body {
   z-index: 0;
   overflow: hidden;
   color: var(--accent);
-  opacity: 0.04;
+  opacity: 0.08;
 }
 .bg-decor svg {
   position: absolute;
@@ -366,7 +367,7 @@ footer {
   /* Below this: collapse sidenotes to inline */
   main {
     padding-right: 1.5rem;
-    max-width: var(--content-width);
+    max-width: var(--reading-width);
   }
   .sidenote {
     position: static;
