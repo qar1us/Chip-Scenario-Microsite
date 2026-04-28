@@ -27,7 +27,21 @@ Deployed via GitHub Pages from the `main` branch. To enable:
 
 ```
 .
-├── index.html      # Scenario page
-├── styles.css      # Styling
+├── index.html      # Single-page site (hero + 5 scenarios)
+├── styles.css      # Editorial dark theme, sticky nav, sidenotes
+├── script.js       # Scroll-spy nav, sidenote toggle
 └── README.md
 ```
+
+## Scenarios
+
+1. **Cyber** — *Compute as a Strategic Cyber Resource* (filled)
+2. **Economic Power** (placeholder, awaiting copy)
+3. **Frontier Models** (placeholder, awaiting copy)
+4. **Military Strength** (placeholder, awaiting copy)
+5. **Distillation** (placeholder, awaiting copy)
+
+## Authoring notes
+
+- Add a sidenote: `<span class="sn-ref" data-sn="N">N</span>` inline, then `<aside class="sidenote" data-sn="N"><sup>N</sup> Note text.</aside>` inside the same paragraph or list item.
+- Sidenotes float in the right margin on wide screens and collapse to inline expandable notes on narrow screens.
