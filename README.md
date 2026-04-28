@@ -37,9 +37,7 @@ Deployed via GitHub Pages from the `main` branch. To enable:
 
 1. **Cyber** — *Compute as a Strategic Cyber Resource* (filled)
 2. **Economic Power** (placeholder, awaiting copy)
-3. **Frontier Models** (placeholder, awaiting copy)
-4. **Military Strength** (placeholder, awaiting copy)
-5. **Distillation** (placeholder, awaiting copy)
+3. **Distillation** (placeholder, awaiting copy)
 
 ## Authoring notes
 
