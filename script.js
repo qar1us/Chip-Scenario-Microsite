@@ -58,13 +58,15 @@
   if (!tooltip || !stage || !segments.length) return;
 
   const data = {
+    'openai-2022':    { unattributed: 0.416, total: 0.416, estimated: true,  source: 'fortune.com' },
+    'anthropic-2023': { unattributed: 0.285, total: 0.285, estimated: true,  source: 'theinformation.com' },
     'openai-2024':    { rd: 4.0, inference: 1.8, total: 5.8,  estimated: true,  source: 'theinformation.com' },
     'openai-2025':    { rd: 8.3, inference: 8.0, total: 16.3, estimated: false, source: 'theinformation.com' },
     'anthropic-2024': { rd: 1.5, inference: 1.0, total: 2.5,  estimated: true,  source: 'theinformation.com' },
     'anthropic-2025': { rd: 4.1, inference: 2.7, total: 6.8,  estimated: false, source: 'theinformation.com' }
   };
   const COMPANY = { openai: 'OpenAI', anthropic: 'Anthropic' };
-  const fmt = v => '$' + v.toFixed(1) + 'B';
+  const fmt = v => v < 1 ? '$' + Math.round(v * 1000) + 'M' : '$' + v.toFixed(1) + 'B';
 
   function showFor(seg) {
     const company = seg.dataset.company;
@@ -77,18 +79,27 @@
     segments.forEach(s => s.classList.toggle('is-active', s === seg));
     chart.setAttribute('data-active', segKey);
 
+    const isUnattributed = 'unattributed' in d;
+    const rowsHTML = isUnattributed
+      ? '<div class="tt-row tt-active">' +
+          '<span class="tt-swatch swatch-' + company + '-rd"></span>' +
+          '<span class="tt-label">Unattributed</span>' +
+          '<span class="tt-value">' + fmt(d.unattributed) + '</span>' +
+        '</div>'
+      : '<div class="tt-row ' + (metric === 'rd' ? 'tt-active' : 'tt-faded') + '">' +
+          '<span class="tt-swatch swatch-' + company + '-rd"></span>' +
+          '<span class="tt-label">R&amp;D</span>' +
+          '<span class="tt-value">' + fmt(d.rd) + '</span>' +
+        '</div>' +
+        '<div class="tt-row ' + (metric === 'inference' ? 'tt-active' : 'tt-faded') + '">' +
+          '<span class="tt-swatch swatch-' + company + '-inf"></span>' +
+          '<span class="tt-label">Inference</span>' +
+          '<span class="tt-value">' + fmt(d.inference) + '</span>' +
+        '</div>';
+
     tooltip.innerHTML =
       '<div class="tt-header">' + year + ' &middot; ' + COMPANY[company] + '</div>' +
-      '<div class="tt-row ' + (metric === 'rd' ? 'tt-active' : 'tt-faded') + '">' +
-        '<span class="tt-swatch swatch-' + company + '-rd"></span>' +
-        '<span class="tt-label">R&amp;D</span>' +
-        '<span class="tt-value">' + fmt(d.rd) + '</span>' +
-      '</div>' +
-      '<div class="tt-row ' + (metric === 'inference' ? 'tt-active' : 'tt-faded') + '">' +
-        '<span class="tt-swatch swatch-' + company + '-inf"></span>' +
-        '<span class="tt-label">Inference</span>' +
-        '<span class="tt-value">' + fmt(d.inference) + '</span>' +
-      '</div>' +
+      rowsHTML +
       '<div class="tt-divider"></div>' +
       '<div class="tt-row tt-summary"><span class="tt-label">Total</span>' +
         '<span class="tt-value">' + fmt(d.total) +

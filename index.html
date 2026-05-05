@@ -189,7 +189,7 @@
         <!-- Compute spend chart -->
         <figure class="compute-chart" id="compute-chart" aria-labelledby="cc-title">
           <figcaption class="chart-title" id="cc-title">U.S. AI compute spend, OpenAI vs Anthropic</figcaption>
-          <p class="chart-subtitle">In billions of USD. Hover or focus a segment for detail. 2024 figures are estimated (hatched fill).</p>
+          <p class="chart-subtitle">USD. Hover or focus a segment for detail. Hatched bars indicate estimated or unattributed compute; only 2025 reflects fully split, current-year reporting.</p>
 
           <div class="chart-legend" aria-hidden="true">
             <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>OpenAI R&amp;D</span>
@@ -231,37 +231,51 @@
                 <text x="56" y="28" text-anchor="end" dy="0.32em">$20B</text>
               </g>
 
+              <!-- 2022 (Unattributed — only OpenAI has data) -->
+              <g class="bar-group" data-segment="openai-2022-unattributed" data-company="openai" data-year="2022" data-metric="unattributed" tabindex="0" role="button" aria-label="OpenAI 2022 unattributed compute spend">
+                <rect class="bar-hit" x="146" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
+                <rect x="146" y="314" width="32" height="6" fill="url(#hatch-openai-rd)"/>
+              </g>
+
+              <!-- 2023 (Unattributed — only Anthropic has data) -->
+              <g class="bar-group" data-segment="anthropic-2023-unattributed" data-company="anthropic" data-year="2023" data-metric="unattributed" tabindex="0" role="button" aria-label="Anthropic 2023 unattributed compute spend">
+                <rect class="bar-hit" x="222" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
+                <rect x="222" y="316" width="32" height="4" fill="url(#hatch-anthropic-rd)"/>
+              </g>
+
               <!-- 2024 (hatched / estimated) -->
               <g class="bar-group" data-segment="anthropic-2024-inference" data-company="anthropic" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2024 inference spend">
-                <rect x="150" y="305" width="36" height="15" fill="url(#hatch-anthropic-inf)"/>
+                <rect x="336" y="305" width="32" height="15" fill="url(#hatch-anthropic-inf)"/>
               </g>
               <g class="bar-group" data-segment="anthropic-2024-rd" data-company="anthropic" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2024 R and D spend">
-                <rect x="150" y="283" width="36" height="22" fill="url(#hatch-anthropic-rd)"/>
+                <rect x="336" y="283" width="32" height="22" fill="url(#hatch-anthropic-rd)"/>
               </g>
               <g class="bar-group" data-segment="openai-2024-inference" data-company="openai" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2024 inference spend">
-                <rect x="192" y="294" width="36" height="26" fill="url(#hatch-openai-inf)"/>
+                <rect x="374" y="294" width="32" height="26" fill="url(#hatch-openai-inf)"/>
               </g>
               <g class="bar-group" data-segment="openai-2024-rd" data-company="openai" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2024 R and D spend">
-                <rect x="192" y="236" width="36" height="58" fill="url(#hatch-openai-rd)"/>
+                <rect x="374" y="236" width="32" height="58" fill="url(#hatch-openai-rd)"/>
               </g>
 
               <!-- 2025 (solid) -->
               <g class="bar-group" data-segment="anthropic-2025-inference" data-company="anthropic" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2025 inference spend">
-                <rect x="400" y="281" width="36" height="39" fill="var(--c-anthropic-inf)"/>
+                <rect x="450" y="281" width="32" height="39" fill="var(--c-anthropic-inf)"/>
               </g>
               <g class="bar-group" data-segment="anthropic-2025-rd" data-company="anthropic" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2025 R and D spend">
-                <rect x="400" y="221" width="36" height="60" fill="var(--c-anthropic-rd)"/>
+                <rect x="450" y="221" width="32" height="60" fill="var(--c-anthropic-rd)"/>
               </g>
               <g class="bar-group" data-segment="openai-2025-inference" data-company="openai" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2025 inference spend">
-                <rect x="442" y="203" width="36" height="117" fill="var(--c-openai-inf)"/>
+                <rect x="488" y="203" width="32" height="117" fill="var(--c-openai-inf)"/>
               </g>
               <g class="bar-group" data-segment="openai-2025-rd" data-company="openai" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2025 R and D spend">
-                <rect x="442" y="82" width="36" height="121" fill="var(--c-openai-rd)"/>
+                <rect x="488" y="82" width="32" height="121" fill="var(--c-openai-rd)"/>
               </g>
 
               <g class="chart-x-labels">
-                <text x="189" y="345" text-anchor="middle" dy="0.85em">2024</text>
-                <text x="439" y="345" text-anchor="middle" dy="0.85em">2025</text>
+                <text x="162" y="345" text-anchor="middle" dy="0.85em">2022</text>
+                <text x="238" y="345" text-anchor="middle" dy="0.85em">2023</text>
+                <text x="384" y="345" text-anchor="middle" dy="0.85em">2024</text>
+                <text x="498" y="345" text-anchor="middle" dy="0.85em">2025</text>
               </g>
             </svg>
 
