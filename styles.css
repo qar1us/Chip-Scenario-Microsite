@@ -37,6 +37,25 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------- Default link styling ---------- */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 129, 102, 0.4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+a:hover {
+  color: var(--accent-soft);
+  text-decoration-color: var(--accent);
+}
+/* Nav-style links opt out of the default treatment */
+.scenario-btn, .scenario-btn:hover,
+.timeline-list a, .timeline-list a:hover {
+  text-decoration: none;
+}
+
 /* ---------- Background decoration ---------- */
 .bg-decor {
   position: fixed;
@@ -333,7 +352,12 @@ h2 {
 
 /* Sidenote container needs relative positioning so absolute sidenote anchors */
 .capabilities > li { /* already position:relative */ }
-.sn-host { position: relative; }
+.sn-host {
+  position: relative;
+  /* Reserve enough vertical space that consecutive sidenotes don't stack on
+     each other when their paragraphs are shorter than their notes. */
+  min-height: 7em;
+}
 
 /* Subscenario heading inside a scenario */
 .subscenario-heading {
