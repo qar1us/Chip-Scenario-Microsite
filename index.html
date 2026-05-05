@@ -192,10 +192,18 @@
           <p class="chart-subtitle">USD. Hover or focus a segment for detail. Hatched bars indicate estimated or unattributed compute; only 2025 reflects fully split, current-year reporting.</p>
 
           <div class="chart-legend" aria-hidden="true">
-            <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>OpenAI R&amp;D</span>
-            <span class="legend-item"><span class="legend-swatch swatch-openai-inf"></span>OpenAI Inference</span>
-            <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd"></span>Anthropic R&amp;D</span>
-            <span class="legend-item"><span class="legend-swatch swatch-anthropic-inf"></span>Anthropic Inference</span>
+            <div class="legend-group">
+              <span class="legend-group-title">OpenAI</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>R&amp;D</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-inf"></span>Inference</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-rd hatched"></span>Unattributed</span>
+            </div>
+            <div class="legend-group">
+              <span class="legend-group-title">Anthropic</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd"></span>R&amp;D</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-inf"></span>Inference</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd hatched"></span>Unattributed</span>
+            </div>
           </div>
 
           <div class="chart-stage">

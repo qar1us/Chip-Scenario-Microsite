@@ -412,10 +412,21 @@ h2 {
 .chart-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1.1rem;
+  gap: 0.4rem 1.75rem;
   margin-bottom: 1rem;
   font-size: 0.78rem;
   color: var(--muted);
+}
+.legend-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.9rem;
+}
+.legend-group-title {
+  font-weight: 600;
+  color: var(--text-soft);
+  letter-spacing: 0.02em;
 }
 .legend-item {
   display: inline-flex;
@@ -433,6 +444,25 @@ h2 {
 .swatch-openai-inf { background: var(--c-openai-inf); }
 .swatch-anthropic-rd { background: var(--c-anthropic-rd); }
 .swatch-anthropic-inf { background: var(--c-anthropic-inf); }
+
+/* Hatched legend swatch — diagonal stripes mirroring the SVG pattern */
+.legend-swatch.hatched {
+  background: transparent;
+}
+.swatch-openai-rd.hatched {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0 2px,
+    var(--c-openai-rd) 2px 4px
+  );
+}
+.swatch-anthropic-rd.hatched {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0 2px,
+    var(--c-anthropic-rd) 2px 4px
+  );
+}
 
 .chart-stage {
   position: relative;
