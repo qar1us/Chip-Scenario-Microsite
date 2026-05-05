@@ -99,9 +99,9 @@
           <li>
             <h3>Deploy AI systems against hardened targets</h3>
             <p>
-              Cyber task performance scales directly with inference compute. UKAISI evaluations found that increasing computational resources from 10 million to 100 million tokens improved autonomous attack performance by up to 59%<span class="sn-ref" data-sn="2">2</span>. Other critical capabilities, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
+              Cyber task performance scales directly with inference compute. UKAISI evaluations found that increasing computational resources from 10 million to 100 million tokens <a href="https://www.aisi.gov.uk/blog/how-do-frontier-ai-agents-perform-in-multi-step-cyber-attack-scenarios" target="_blank" rel="noopener">improved autonomous attack performance</a> by up to 59%<span class="sn-ref" data-sn="2">2</span>. Other critical capabilities, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
             </p>
-            <aside class="sidenote" data-sn="2"><sup>2</sup> UK AI Safety Institute evaluation of inference-compute scaling on autonomous cyber tasks. Citation to be added.</aside>
+            <aside class="sidenote" data-sn="2"><sup>2</sup> UK AI Safety Institute, multi-step cyber-attack agent evaluation.</aside>
           </li>
         </ul>
 
@@ -109,8 +109,24 @@
           A nation-state could use its compute advantage to attack highly strategic and well-defended targets such as military networks, critical infrastructure, and the energy and financial sectors. Compute could be used to train and run specialized AI systems that find undiscovered vulnerabilities in a target&rsquo;s specific software stack and to run autonomous agents that continuously probe well-defended targets for weaknesses.
         </p>
 
+        <h3 class="subscenario-heading">Scenario: Scaled theft of American intellectual property</h3>
+
+        <div class="sn-host">
+          <p>
+            Leveraging compute to develop and deploy AI systems for offensive campaigns, PRC actors launch one of the largest and most comprehensive economic cyber espionage campaigns in history, targeting American intellectual property and trade secrets across manufacturing, defense, aerospace, semiconductors, and biotech. State-sponsored Chinese firms then use the stolen information to bring competing products to market faster and cheaper, eroding U.S. competitiveness across strategic sectors for years. The scale of the harm dwarfs the 2010-era operations, which were estimated to cost the U.S. <a href="https://www.nbr.org/wp-content/uploads/pdfs/publications/IP_Commission_Report_Update.pdf" target="_blank" rel="noopener">economy between $225 and $600 billion annually</a> as of 2017<span class="sn-ref" data-sn="3">3</span>.
+          </p>
+          <aside class="sidenote" data-sn="3"><sup>3</sup> National Bureau of Asian Research, IP Commission Report (update).</aside>
+        </div>
+
+        <div class="sn-host">
+          <p>
+            AI gives the threat actors operational advantages that were not possible just a few years ago. The tempo and scale let attackers hit multiple targets simultaneously, outpacing defenders&rsquo; ability to identify the activity or share threat intelligence in time. Once inside a network, AI systems can quickly identify and steal the most valuable information, giving defenders less time to detect and respond. This tactic was already demonstrated in fall 2025, when <a href="https://www.anthropic.com/news/disrupting-AI-espionage" target="_blank" rel="noopener">Chinese state-sponsored actors used less capable AI</a> to run an espionage campaign against major technology corporations and government agencies<span class="sn-ref" data-sn="4">4</span>.
+          </p>
+          <aside class="sidenote" data-sn="4"><sup>4</sup> Anthropic, &ldquo;Disrupting AI Espionage&rdquo; (2025).</aside>
+        </div>
+
         <div class="vignette">
-          <p class="vignette-label">What this might look like</p>
+          <p class="vignette-label">What this might look like if we give them compute</p>
           <p>
             With additional compute, China builds AI systems trained for cyberattacks and deploys them at a scale the United States cannot defend against quickly enough. Thousands of AI agents work their way into the networks of major U.S. banks, clearinghouses, defense and aerospace firms, and other Fortune 500 companies.
           </p>
@@ -121,34 +137,163 @@
       </div>
     </section>
 
-    <!-- Economic Power (placeholder) -->
-    <section id="economic" class="scenario placeholder">
+    <!-- Economic Power -->
+    <section id="economic" class="scenario">
       <div class="scenario-meta">
         <span class="scenario-number">02</span>
         <span class="scenario-tag">Economic Power</span>
+        <span class="draft-tag">Draft</span>
       </div>
-      <h2 class="placeholder-title">Title forthcoming</h2>
+      <h2>Compute and the Global AI Market</h2>
+
       <div class="scenario-body">
-        <p class="placeholder-note">Scenario copy in progress. Section is wired up and ready for contributor text.</p>
-        <div class="vignette placeholder-vignette">
-          <p class="vignette-label">What this might look like</p>
-          <p class="placeholder-note">Closing vignette will appear here.</p>
-        </div>
+        <p class="scenario-lede">
+          Additional compute allows China to serve more customers with better models. China&rsquo;s global market share of the AI market grows, pushing out U.S. AI companies like OpenAI.
+        </p>
+
+        <p>
+          Southeast Asia uses Chinese AI models instead of U.S. ones to power their economic growth. China encourages their companies to use their new compute to experiment with and develop AI applications with the Chinese AI models as the foundation of those applications. Those new applications incubate in China, and the most successful ones become a fixture of global technology development.
+        </p>
+
+        <p class="placeholder-note"><em>This section is in draft &mdash; the contributor expects to flesh it out 2&ndash;3&times;.</em></p>
       </div>
     </section>
 
-    <!-- Distillation (placeholder) -->
-    <section id="distillation" class="scenario placeholder">
+    <!-- Distillation -->
+    <section id="distillation" class="scenario">
       <div class="scenario-meta">
         <span class="scenario-number">03</span>
         <span class="scenario-tag">Distillation</span>
       </div>
-      <h2 class="placeholder-title">Title forthcoming</h2>
+      <h2>Compute as an Engine of Distillation and IP Theft</h2>
+
       <div class="scenario-body">
-        <p class="placeholder-note">Scenario copy in progress. Section is wired up and ready for contributor text.</p>
-        <div class="vignette placeholder-vignette">
+        <p class="scenario-lede">
+          Compute enables adversaries to conduct distillation attacks and use that stolen intellectual property to undermine American AI companies&rsquo; competitiveness.
+        </p>
+
+        <div class="sn-host">
+          <p>
+            <a href="https://www.iaps.ai/s/AI-Distillation-Attacks_-The-Case-for-Targeted-Government-Intervention.pdf" target="_blank" rel="noopener">Distillation attacks</a><span class="sn-ref" data-sn="5">5</span> are systematic campaigns to extract capabilities from American AI models. Adversaries can use such attacks to, in essence, steal the advanced capabilities of American models for a fraction of the original development cost.
+          </p>
+          <aside class="sidenote" data-sn="5"><sup>5</sup> Institute for AI Policy and Strategy, &ldquo;AI Distillation Attacks: The Case for Targeted Government Intervention.&rdquo;</aside>
+        </div>
+
+        <div class="sn-host">
+          <p>
+            American frontier AI companies have invested billions of dollars to develop frontier models<span class="sn-ref" data-sn="6">6</span>. With distillation, adversary-linked competitors can release near-frontier models at a <a href="https://artificialanalysis.ai/models/comparisons/kimi-k2-6-vs-claude-opus-4-7#pricing" target="_blank" rel="noopener">significantly lower price</a> or <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">for free</a>, threatening the commercial viability of American AI. By cutting into American companies&rsquo; revenue streams, adversary models further lower American investment in research and infrastructure.
+          </p>
+          <aside class="sidenote" data-sn="6"><sup>6</sup> See chart below. Source: Epoch AI.</aside>
+        </div>
+
+        <!-- Compute spend chart -->
+        <figure class="compute-chart" id="compute-chart" aria-labelledby="cc-title">
+          <figcaption class="chart-title" id="cc-title">U.S. AI compute spend, OpenAI vs Anthropic</figcaption>
+          <p class="chart-subtitle">In billions of USD. Hover or focus a segment for detail. 2024 figures are estimated (hatched fill).</p>
+
+          <div class="chart-legend" aria-hidden="true">
+            <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>OpenAI R&amp;D</span>
+            <span class="legend-item"><span class="legend-swatch swatch-openai-inf"></span>OpenAI Inference</span>
+            <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd"></span>Anthropic R&amp;D</span>
+            <span class="legend-item"><span class="legend-swatch swatch-anthropic-inf"></span>Anthropic Inference</span>
+          </div>
+
+          <div class="chart-stage">
+            <svg class="chart-svg" viewBox="0 0 600 400" role="img" aria-label="Stacked bar chart comparing OpenAI and Anthropic compute spend in 2024 and 2025">
+              <defs>
+                <pattern id="hatch-openai-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-rd)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-openai-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-inf)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-anthropic-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-rd)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-anthropic-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-inf)" stroke-width="2.4"/>
+                </pattern>
+              </defs>
+
+              <g class="chart-grid">
+                <line x1="64" y1="320" x2="564" y2="320"/>
+                <line x1="64" y1="247" x2="564" y2="247"/>
+                <line x1="64" y1="174" x2="564" y2="174"/>
+                <line x1="64" y1="101" x2="564" y2="101"/>
+                <line x1="64" y1="28" x2="564" y2="28"/>
+              </g>
+
+              <g class="chart-y-labels">
+                <text x="56" y="320" text-anchor="end" dy="0.32em">$0</text>
+                <text x="56" y="247" text-anchor="end" dy="0.32em">$5B</text>
+                <text x="56" y="174" text-anchor="end" dy="0.32em">$10B</text>
+                <text x="56" y="101" text-anchor="end" dy="0.32em">$15B</text>
+                <text x="56" y="28" text-anchor="end" dy="0.32em">$20B</text>
+              </g>
+
+              <!-- 2024 (hatched / estimated) -->
+              <g class="bar-group" data-segment="anthropic-2024-inference" data-company="anthropic" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2024 inference spend">
+                <rect x="150" y="305" width="36" height="15" fill="url(#hatch-anthropic-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="anthropic-2024-rd" data-company="anthropic" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2024 R and D spend">
+                <rect x="150" y="283" width="36" height="22" fill="url(#hatch-anthropic-rd)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2024-inference" data-company="openai" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2024 inference spend">
+                <rect x="192" y="294" width="36" height="26" fill="url(#hatch-openai-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2024-rd" data-company="openai" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2024 R and D spend">
+                <rect x="192" y="236" width="36" height="58" fill="url(#hatch-openai-rd)"/>
+              </g>
+
+              <!-- 2025 (solid) -->
+              <g class="bar-group" data-segment="anthropic-2025-inference" data-company="anthropic" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2025 inference spend">
+                <rect x="400" y="281" width="36" height="39" fill="var(--c-anthropic-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="anthropic-2025-rd" data-company="anthropic" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2025 R and D spend">
+                <rect x="400" y="221" width="36" height="60" fill="var(--c-anthropic-rd)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2025-inference" data-company="openai" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2025 inference spend">
+                <rect x="442" y="203" width="36" height="117" fill="var(--c-openai-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2025-rd" data-company="openai" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2025 R and D spend">
+                <rect x="442" y="82" width="36" height="121" fill="var(--c-openai-rd)"/>
+              </g>
+
+              <g class="chart-x-labels">
+                <text x="189" y="345" text-anchor="middle" dy="0.85em">2024</text>
+                <text x="439" y="345" text-anchor="middle" dy="0.85em">2025</text>
+              </g>
+            </svg>
+
+            <div class="chart-tooltip" hidden></div>
+          </div>
+
+          <p class="chart-source">
+            Source: <a href="https://epoch.ai/data/ai-companies?dataView=compute&amp;view=graph&amp;tab=compute" target="_blank" rel="noopener">Epoch AI</a>, drawing on reporting from <em>The Information</em>. 2024 figures are estimates.
+          </p>
+        </figure>
+
+        <p>But distillation is not free: serving, training on, and refining distilled models at scale still requires substantial compute. Additional chip access would allow a rival to:</p>
+
+        <ul class="capabilities">
+          <li>
+            <h3>Scale, increase, and improve distillation attacks</h3>
+            <p>Significant compute is required to train adversary models on illicitly acquired model outputs. Greater compute capacity can allow adversaries to run larger, faster, and more sophisticated distillation attacks.</p>
+          </li>
+          <li>
+            <h3>Refine distilled models to close the remaining gap</h3>
+            <p>Raw distillation outputs are a starting point, not a finished product. Post-training techniques on compute-intensive reinforcement learning tactics allow adversaries to further push a model toward a genuine competitor. Distillation attacks effectively subsidize some stages of the training pipeline, freeing up compute that can be redirected toward the other stages it does not substitute well for.</p>
+          </li>
+        </ul>
+
+        <div class="vignette">
           <p class="vignette-label">What this might look like</p>
-          <p class="placeholder-note">Closing vignette will appear here.</p>
+          <p>
+            With additional compute, Chinese AI companies scale up distillation attacks against every major American frontier model release, extracting capabilities within hours of launch. The stolen IP is used in open-weight models released globally and served on Chinese AI companies&rsquo; infrastructure at a fraction of the cost of American alternatives, rapidly capturing market share across emerging economies.
+          </p>
+          <p>
+            American AI companies are unable to compete on price and see international revenues collapse. They are forced to cut the R&amp;D budgets that have built their lead at the frontier. Within a few years, the ecosystem that produced America&rsquo;s AI advantage has been hollowed out. Meanwhile, China&rsquo;s fast-following strategy results in their models being the global default, enabling greater Chinese influence on global AI norms, standards, and markets.
+          </p>
         </div>
       </div>
     </section>

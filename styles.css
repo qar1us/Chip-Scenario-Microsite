@@ -333,7 +333,209 @@ h2 {
 
 /* Sidenote container needs relative positioning so absolute sidenote anchors */
 .capabilities > li { /* already position:relative */ }
-.scenario-body p { position: relative; }
+.sn-host { position: relative; }
+
+/* Subscenario heading inside a scenario */
+.subscenario-heading {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2.25rem 0 0.85rem;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+/* Draft tag */
+.draft-tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  margin-left: 0.5rem;
+}
+
+/* ---------- Compute spend chart ---------- */
+.compute-chart {
+  --c-openai-rd: #6dd2d2;
+  --c-openai-inf: #2a9999;
+  --c-anthropic-rd: #f08fb8;
+  --c-anthropic-inf: #d63b8a;
+
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+}
+.chart-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+  color: var(--text);
+}
+.chart-subtitle {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0 0 1.1rem !important;
+  line-height: 1.45;
+}
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.swatch-openai-rd { background: var(--c-openai-rd); }
+.swatch-openai-inf { background: var(--c-openai-inf); }
+.swatch-anthropic-rd { background: var(--c-anthropic-rd); }
+.swatch-anthropic-inf { background: var(--c-anthropic-inf); }
+
+.chart-stage {
+  position: relative;
+}
+.chart-svg {
+  width: 100%;
+  height: auto;
+  font-family: var(--sans);
+  display: block;
+}
+.chart-grid line {
+  stroke: var(--rule-soft);
+  stroke-width: 1;
+}
+.chart-y-labels text {
+  fill: var(--muted-2);
+  font-size: 11px;
+}
+.chart-x-labels text {
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.bar-group {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.18s ease;
+}
+.bar-group rect {
+  transition: opacity 0.18s ease;
+}
+.bar-group:focus-visible rect {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* When a segment is active, all others fade */
+.compute-chart[data-active] .bar-group { opacity: 0.18; }
+.compute-chart[data-active] .bar-group.is-active { opacity: 1; }
+
+/* ---------- Chart tooltip ---------- */
+.chart-tooltip {
+  position: absolute;
+  z-index: 10;
+  width: 230px;
+  padding: 0.85rem 1rem 0.95rem;
+  background: rgba(13, 17, 23, 0.97);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+  font-size: 0.85rem;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+.chart-tooltip[hidden] { display: none; }
+
+.tt-header {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.55rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.tt-row {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.22rem 0;
+  color: var(--text-soft);
+  line-height: 1.3;
+}
+.tt-row.tt-faded { color: var(--muted-2); }
+.tt-row.tt-faded .tt-swatch { opacity: 0.35; }
+.tt-row.tt-active .tt-label,
+.tt-row.tt-active .tt-value { color: var(--text); font-weight: 500; }
+.tt-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+.tt-label { font-size: 0.83rem; }
+.tt-value { font-size: 0.83rem; font-variant-numeric: tabular-nums; }
+.tt-divider {
+  height: 1px;
+  background: var(--rule-soft);
+  margin: 0.5rem 0 0.4rem;
+}
+.tt-summary {
+  grid-template-columns: 1fr auto;
+}
+.tt-summary .tt-label { color: var(--muted); font-size: 0.78rem; }
+.tt-summary .tt-value {
+  color: var(--text);
+  font-size: 0.83rem;
+  font-variant-numeric: tabular-nums;
+}
+.tt-source-text {
+  color: var(--muted);
+  font-size: 0.74rem;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.3;
+}
+.tt-est-flag {
+  color: var(--muted-2);
+  font-size: 0.72rem;
+  font-style: italic;
+  margin-left: 0.25rem;
+}
+
+.chart-source {
+  margin: 1rem 0 0 !important;
+  font-size: 0.78rem;
+  color: var(--muted-2) !important;
+  line-height: 1.5;
+}
+.chart-source a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+}
+.chart-source a:hover { color: var(--text-soft); }
 
 /* ---------- Placeholder sections ---------- */
 .placeholder { opacity: 0.7; }
