@@ -88,12 +88,12 @@
         '</div>'
       : '<div class="tt-row ' + (metric === 'rd' ? 'tt-active' : 'tt-faded') + '">' +
           '<span class="tt-swatch swatch-' + company + '-rd"></span>' +
-          '<span class="tt-label">R&amp;D</span>' +
+          '<span class="tt-label">Training and experiments<br><span class="tt-sublabel">(R&amp;D)</span></span>' +
           '<span class="tt-value">' + fmt(d.rd) + '</span>' +
         '</div>' +
         '<div class="tt-row ' + (metric === 'inference' ? 'tt-active' : 'tt-faded') + '">' +
           '<span class="tt-swatch swatch-' + company + '-inf"></span>' +
-          '<span class="tt-label">Inference</span>' +
+          '<span class="tt-label">Running the model<br><span class="tt-sublabel">(Inference)</span></span>' +
           '<span class="tt-value">' + fmt(d.inference) + '</span>' +
         '</div>';
 

@@ -509,7 +509,7 @@ h2 {
 .chart-tooltip {
   position: absolute;
   z-index: 10;
-  width: 230px;
+  width: 260px;
   padding: 0.85rem 1rem 0.95rem;
   background: rgba(13, 17, 23, 0.97);
   border: 1px solid var(--rule);
@@ -548,8 +548,10 @@ h2 {
   height: 12px;
   border-radius: 2px;
 }
-.tt-label { font-size: 0.83rem; }
-.tt-value { font-size: 0.83rem; font-variant-numeric: tabular-nums; }
+.tt-label { font-size: 0.83rem; line-height: 1.25; }
+.tt-sublabel { color: var(--muted-2); font-size: 0.74rem; }
+.tt-row.tt-active .tt-sublabel { color: var(--muted); }
+.tt-value { font-size: 0.83rem; font-variant-numeric: tabular-nums; align-self: start; padding-top: 0.1rem; }
 .tt-divider {
   height: 1px;
   background: var(--rule-soft);
