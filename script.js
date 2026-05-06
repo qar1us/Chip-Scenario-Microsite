@@ -58,15 +58,25 @@
   if (!tooltip || !stage || !segments.length) return;
 
   const data = {
-    'openai-2022':    { unattributed: 0.416, total: 0.416, estimated: true,  source: 'fortune.com' },
-    'anthropic-2023': { unattributed: 0.285, total: 0.285, estimated: true,  source: 'theinformation.com' },
-    'openai-2024':    { rd: 4.0, inference: 1.8, total: 5.8,  estimated: true,  source: 'theinformation.com' },
-    'openai-2025':    { rd: 8.3, inference: 8.0, total: 16.3, estimated: false, source: 'theinformation.com' },
-    'anthropic-2024': { rd: 1.5, inference: 1.0, total: 2.5,  estimated: true,  source: 'theinformation.com' },
-    'anthropic-2025': { rd: 4.1, inference: 2.7, total: 6.8,  estimated: false, source: 'theinformation.com' }
+    'openai-2022':    { unattributed: 0.416, total: 0.416, estimated: true,
+      source: 'https://fortune.com/longform/chatgpt-openai-sam-altman-microsoft/' },
+    'anthropic-2023': { unattributed: 0.285, total: 0.285, estimated: true,
+      source: 'https://www.theinformation.com/articles/pro-weekly-ai-pushes-cloud-vendors-to-new-heights' },
+    'openai-2024':    { rd: 4.0, inference: 1.8, total: 5.8,  estimated: true,
+      source: 'https://www.theinformation.com/articles/openai-projections-imply-losses-tripling-to-14-billion-in-2026' },
+    'openai-2025':    { rd: 8.3, inference: 8.0, total: 16.3, estimated: false,
+      source: 'https://www.theinformation.com/articles/openai-boost-revenue-forecasts-predicts-112-billion-cash-burn-2030' },
+    'anthropic-2024': { rd: 1.5, inference: 1.0, total: 2.5,  estimated: true,
+      source: 'https://www.theinformation.com/articles/anthropic-projects-soaring-growth-to-34-5-billion-in-2027-revenue' },
+    'anthropic-2025': { rd: 4.1, inference: 2.7, total: 6.8,  estimated: false,
+      source: 'https://www.theinformation.com/articles/anthropic-lowers-profit-margin-projection-revenue-skyrockets' }
   };
   const COMPANY = { openai: 'OpenAI', anthropic: 'Anthropic' };
   const fmt = v => v < 1 ? '$' + Math.round(v * 1000) + 'M' : '$' + v.toFixed(1) + 'B';
+  const sourceHost = url => {
+    try { return new URL(url).hostname.replace(/^www\./, ''); }
+    catch (e) { return url; }
+  };
 
   function showFor(seg) {
     const company = seg.dataset.company;
@@ -108,7 +118,9 @@
       '<div class="tt-row tt-summary"><span class="tt-label">Year</span>' +
         '<span class="tt-value">' + year + '</span></div>' +
       '<div class="tt-row tt-summary"><span class="tt-label">Source</span>' +
-        '<span class="tt-source-text">' + d.source + '</span></div>';
+        '<a class="tt-source-link" href="' + d.source + '" target="_blank" rel="noopener">' +
+          sourceHost(d.source) +
+        '</a></div>';
 
     tooltip.hidden = false;
     positionTooltip(seg);
@@ -141,10 +153,16 @@
     segments.forEach(s => s.classList.remove('is-active'));
   }
 
+  // Hand-off: the bar's mouseleave fires when the cursor crosses onto the
+  // tooltip. Defer the hide so the user can reach the source link.
+  let hideTimer = null;
+  const queueHide = () => { hideTimer = setTimeout(hide, 200); };
+  const cancelHide = () => { if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; } };
+
   segments.forEach(seg => {
-    seg.addEventListener('mouseenter', () => showFor(seg));
-    seg.addEventListener('mouseleave', hide);
-    seg.addEventListener('focus', () => showFor(seg));
+    seg.addEventListener('mouseenter', () => { cancelHide(); showFor(seg); });
+    seg.addEventListener('mouseleave', queueHide);
+    seg.addEventListener('focus', () => { cancelHide(); showFor(seg); });
     seg.addEventListener('blur', hide);
     seg.addEventListener('click', e => {
       e.stopPropagation();
@@ -162,6 +180,9 @@
       }
     });
   });
+
+  tooltip.addEventListener('mouseenter', cancelHide);
+  tooltip.addEventListener('mouseleave', hide);
 
   document.addEventListener('click', e => {
     if (!chart.contains(e.target)) hide();
