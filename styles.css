@@ -393,6 +393,29 @@ h2 {
   margin-left: 0.5rem;
 }
 
+/* ---------- Evidence citation block (end-of-section) ---------- */
+.evidence-citation {
+  display: block;
+  margin: 2rem 0 0;
+  padding: 1rem 1.25rem 1.1rem;
+  background: var(--surface-soft);
+  border-left: 2px solid var(--rule);
+  border-radius: 0 4px 4px 0;
+}
+.evidence-link {
+  margin: 0 0 0.4rem !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--text-soft) !important;
+}
+.evidence-caption {
+  margin: 0 !important;
+  font-size: 0.85rem;
+  color: var(--muted) !important;
+  line-height: 1.55;
+}
+
 /* ---------- Compute spend chart ---------- */
 .compute-chart {
   --c-openai-rd: #6dd2d2;
