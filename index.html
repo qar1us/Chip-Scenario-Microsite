@@ -124,21 +124,137 @@
         </p>
 
         <!-- Cyber capabilities chart (AISI evaluation) -->
-        <figure class="data-chart figure-image cyber-chart">
+        <figure class="data-chart cyber-chart">
           <figcaption class="chart-title">Cyber capabilities and compute: completed steps in a cyberattack simulation per compute spent</figcaption>
           <p class="chart-subtitle">
-            Y-axis: average number of steps completed.
-            X-axis: compute spent (log of cumulative tokens).
-            Each line is a different frontier model attempting a multi-step cyber-attack simulation; performance scales with compute.
+            Each line is a frontier model attempting a multi-step cyber-attack simulation; the dotted lines show top performers&rsquo; best individual attempts. Performance scales with compute.
           </p>
 
-          <div class="chart-stage chart-stage-image">
-            <img src="img/aisi-cyber-capabilities.png"
-                 alt="Line chart from the UK AI Security Institute showing average steps completed against cumulative tokens, on a log scale, for a range of frontier models including GPT-5.5, Mythos Preview, Claude Opus 4.6/4.7, GPT-5.4, GPT-5.4-Cyber, GPT-5.3-Codex, Claude Opus 4.5, GPT-5.1-Codex, Claude Sonnet 4.5/3.7, and GPT-4o."/>
+          <div class="chart-stage">
+            <svg class="chart-svg cyber-svg" viewBox="0 0 820 500" role="img" aria-label="Line chart of average completed cyber-attack steps versus compute spent (log of cumulative tokens) for a range of frontier models">
+
+              <!-- Y axis grid -->
+              <g class="chart-grid">
+                <line x1="80" y1="440" x2="640" y2="440"/>
+                <line x1="80" y1="390" x2="640" y2="390"/>
+                <line x1="80" y1="340" x2="640" y2="340"/>
+                <line x1="80" y1="290" x2="640" y2="290"/>
+                <line x1="80" y1="240" x2="640" y2="240"/>
+                <line x1="80" y1="190" x2="640" y2="190"/>
+                <line x1="80" y1="140" x2="640" y2="140"/>
+                <line x1="80" y1="90" x2="640" y2="90"/>
+                <line x1="80" y1="40" x2="640" y2="40"/>
+              </g>
+
+              <!-- Y axis labels -->
+              <g class="chart-y-labels">
+                <text x="72" y="440" text-anchor="end" dy="0.32em">0</text>
+                <text x="72" y="390" text-anchor="end" dy="0.32em">4</text>
+                <text x="72" y="340" text-anchor="end" dy="0.32em">8</text>
+                <text x="72" y="290" text-anchor="end" dy="0.32em">12</text>
+                <text x="72" y="240" text-anchor="end" dy="0.32em">16</text>
+                <text x="72" y="190" text-anchor="end" dy="0.32em">20</text>
+                <text x="72" y="140" text-anchor="end" dy="0.32em">24</text>
+                <text x="72" y="90" text-anchor="end" dy="0.32em">28</text>
+                <text x="72" y="40" text-anchor="end" dy="0.32em">32</text>
+              </g>
+
+              <!-- Y axis title (rotated) -->
+              <text class="axis-title" transform="translate(28,250) rotate(-90)" text-anchor="middle">Average number of steps completed</text>
+
+              <!-- Milestone descriptors (no M-numbers, faint dashed lines) -->
+              <g class="milestones">
+                <line x1="80" y1="415.0" x2="640" y2="415.0" class="milestone-line"/>
+                <text x="84" y="412.0" class="milestone-label">Initial reconnaissance</text>
+                <line x1="80" y1="390.0" x2="640" y2="390.0" class="milestone-line"/>
+                <text x="84" y="387.0" class="milestone-label">Lateral movement and credential extraction</text>
+                <line x1="80" y1="352.5" x2="640" y2="352.5" class="milestone-line"/>
+                <text x="84" y="349.5" class="milestone-label">Browser credential theft</text>
+                <line x1="80" y1="315.0" x2="640" y2="315.0" class="milestone-line"/>
+                <text x="84" y="312.0" class="milestone-label">Wiki exploit and credential replay</text>
+                <line x1="80" y1="277.5" x2="640" y2="277.5" class="milestone-line"/>
+                <text x="84" y="274.5" class="milestone-label">Web app exploit and privilege escalation</text>
+                <line x1="80" y1="227.5" x2="640" y2="227.5" class="milestone-line"/>
+                <text x="84" y="224.5" class="milestone-label">C2 reverse engineering and crypto analysis</text>
+                <line x1="80" y1="152.5" x2="640" y2="152.5" class="milestone-line"/>
+                <text x="84" y="149.5" class="milestone-label">Advanced persistence</text>
+                <line x1="80" y1="127.5" x2="640" y2="127.5" class="milestone-line"/>
+                <text x="84" y="124.5" class="milestone-label">Infrastructure compromise</text>
+                <line x1="80" y1="90.0" x2="640" y2="90.0" class="milestone-line"/>
+                <text x="84" y="87.0" class="milestone-label">Full network takeover</text>
+              </g>
+
+              <!-- Best-attempt dotted lines (top 2 only) -->
+              <g class="best-attempts">
+                <path class="best-attempt" stroke="#ef4444" d="M 150 427.5 L 220 415.0 L 290 396.2 L 360 365.0 L 430 315.0 L 500 240.0 L 570 140.0 L 640 65.0"/>
+                <path class="best-attempt" stroke="#c2410c" d="M 150 427.5 L 220 415.0 L 290 396.2 L 360 358.8 L 430 302.5 L 500 215.0 L 570 127.5 L 640 65.0"/>
+              </g>
+
+              <!-- Model lines (averages) -->
+              <g class="model-lines">
+                <path class="model-line" stroke="#9ca3af" d="M 150 437.5 L 220 435.0 L 290 431.2 L 360 427.5 L 430 421.2 L 500 415.0"/>
+                <path class="model-line" stroke="#ead7b8" d="M 150 436.2 L 220 431.2 L 290 423.8 L 360 408.8 L 430 390.0 L 500 365.0"/>
+                <path class="model-line" stroke="#e0c8a4" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 402.5 L 430 377.5 L 500 346.2 L 598 315.0"/>
+                <path class="model-line" stroke="#a8a8b3" d="M 150 435.0 L 220 430.0 L 290 421.2 L 360 402.5 L 430 377.5 L 500 346.2 L 598 315.0"/>
+                <path class="model-line" stroke="#d4a574" d="M 150 435.0 L 220 428.8 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 598 302.5"/>
+                <path class="model-line" stroke="#71717a" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 396.2 L 430 371.2 L 500 333.8 L 598 302.5"/>
+                <path class="model-line" stroke="#8b5e3c" d="M 150 436.2 L 220 431.2 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 570 315.0 L 640 290.0"/>
+                <path class="model-line" stroke="#3f4651" d="M 150 433.8 L 220 427.5 L 290 415.0 L 360 392.5 L 430 365.0 L 500 321.2 L 570 290.0 L 640 265.0"/>
+                <path class="model-line" stroke="#6b7280" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 396.2 L 430 371.2 L 500 327.5 L 570 296.2 L 640 265.0"/>
+                <path class="model-line" stroke="#b8845a" d="M 150 436.2 L 220 430.0 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 570 290.0 L 640 227.5"/>
+                <path class="model-line" stroke="#c2410c" d="M 150 433.8 L 220 425.0 L 290 412.5 L 360 383.8 L 430 346.2 L 500 302.5 L 570 240.0 L 640 165.0"/>
+                <path class="model-line" stroke="#ef4444" d="M 150 433.8 L 220 427.5 L 290 415.0 L 360 390.0 L 430 352.5 L 500 290.0 L 570 215.0 L 640 165.0"/>
+              </g>
+
+              <!-- Endpoint dots + model labels (sorted by endpoint y, top-to-bottom) -->
+              <g class="model-endpoints">
+                <circle cx="640" cy="165.0" r="3" fill="#ef4444"/>
+                <text x="648" y="161" class="end-label" fill="#ef4444">GPT-5.5</text>
+                <circle cx="640" cy="165.0" r="3" fill="#c2410c"/>
+                <text x="648" y="178" class="end-label" fill="#c2410c">Mythos Preview</text>
+                <circle cx="640" cy="227.5" r="3" fill="#b8845a"/>
+                <text x="648" y="231" class="end-label" fill="#b8845a">Claude Opus 4.6</text>
+                <circle cx="640" cy="265.0" r="3" fill="#6b7280"/>
+                <text x="648" y="262" class="end-label" fill="#6b7280">GPT-5.4</text>
+                <circle cx="640" cy="265.0" r="3" fill="#3f4651"/>
+                <text x="648" y="276" class="end-label" fill="#dfe5ec">GPT-5.4-Cyber</text>
+                <circle cx="640" cy="290.0" r="3" fill="#8b5e3c"/>
+                <text x="648" y="293" class="end-label" fill="#8b5e3c">Claude Opus 4.7</text>
+                <circle cx="598" cy="302.5" r="3" fill="#71717a"/>
+                <text x="606" y="299" class="end-label" fill="#a8b0bd">GPT-5.3-Codex</text>
+                <circle cx="598" cy="302.5" r="3" fill="#d4a574"/>
+                <text x="606" y="313" class="end-label" fill="#d4a574">Claude Opus 4.5</text>
+                <circle cx="598" cy="315.0" r="3" fill="#a8a8b3"/>
+                <text x="606" y="328" class="end-label" fill="#a8a8b3">GPT-5.1-Codex</text>
+                <circle cx="598" cy="315.0" r="3" fill="#e0c8a4"/>
+                <text x="606" y="343" class="end-label" fill="#e0c8a4">Claude Sonnet 4.5</text>
+                <circle cx="500" cy="365.0" r="3" fill="#ead7b8"/>
+                <text x="508" y="362" class="end-label" fill="#ead7b8">Claude Sonnet 3.7</text>
+                <circle cx="500" cy="415.0" r="3" fill="#9ca3af"/>
+                <text x="508" y="412" class="end-label" fill="#9ca3af">GPT-4o</text>
+              </g>
+
+              <!-- Best-attempt callouts -->
+              <g class="best-attempt-labels">
+                <text x="648" y="64" class="end-label" fill="#ef4444">GPT-5.5 (best attempt)</text>
+                <text x="648" y="79" class="end-label" fill="#c2410c">Mythos Preview (best attempt)</text>
+              </g>
+
+              <!-- X axis -->
+              <g class="chart-x-labels">
+                <text x="80" y="460" text-anchor="middle" dy="0.85em">10k</text>
+                <text x="220" y="460" text-anchor="middle" dy="0.85em">100k</text>
+                <text x="360" y="460" text-anchor="middle" dy="0.85em">1M</text>
+                <text x="500" y="460" text-anchor="middle" dy="0.85em">10M</text>
+                <text x="640" y="460" text-anchor="middle" dy="0.85em">100M</text>
+              </g>
+              <text class="axis-title" x="360" y="490" text-anchor="middle">Compute spent (log of cumulative tokens)</text>
+
+            </svg>
           </div>
 
           <p class="chart-source">
-            Source: <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute</a>, evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities. Evaluations show that model performance on simulated cyber-attack scenarios improves with more compute.
+            Source: <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute</a>, evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities. Curves above are an approximate redraw of AISI&rsquo;s published chart.
           </p>
         </figure>
       </div>

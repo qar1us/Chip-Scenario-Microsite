@@ -466,18 +466,70 @@ h2 {
   text-transform: uppercase;
 }
 
-/* ---------- Cyber image figure ---------- */
-.figure-image .chart-stage-image {
-  position: relative;
-  background: #fafbfc;
-  border-radius: 4px;
-  padding: 0.75rem;
-}
-.figure-image .chart-stage-image img {
-  display: block;
+/* ---------- Cyber capabilities chart (re-drawn SVG) ---------- */
+.cyber-chart .chart-svg {
   width: 100%;
   height: auto;
-  border-radius: 2px;
+  display: block;
+  font-family: var(--sans);
+}
+.cyber-chart .chart-grid line {
+  stroke: var(--rule-soft);
+  stroke-width: 0.75;
+}
+.cyber-chart .chart-y-labels text,
+.cyber-chart .chart-x-labels text {
+  fill: var(--muted-2);
+  font-size: 11px;
+}
+.cyber-chart .axis-title {
+  fill: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.cyber-chart .milestone-line {
+  stroke: var(--rule-soft);
+  stroke-width: 0.5;
+  stroke-dasharray: 3 3;
+  opacity: 0.5;
+}
+.cyber-chart .milestone-label {
+  fill: var(--muted-2);
+  font-size: 9.5px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+.cyber-chart .model-line {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.cyber-chart .best-attempt {
+  fill: none;
+  stroke-width: 1.2;
+  stroke-dasharray: 3 3;
+  stroke-linejoin: round;
+  opacity: 0.7;
+}
+.cyber-chart .end-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.cyber-chart .model-endpoints circle {
+  stroke: var(--surface);
+  stroke-width: 1;
+}
+
+/* On narrow viewports, allow horizontal scroll for the dense cyber chart */
+@media (max-width: 720px) {
+  .cyber-chart .chart-stage {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cyber-chart .chart-svg { min-width: 720px; }
 }
 
 /* ---------- Evidence citation block (end-of-section) ---------- */
