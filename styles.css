@@ -393,6 +393,93 @@ h2 {
   margin-left: 0.5rem;
 }
 
+/* ---------- Generic data-chart wrapper (used by ECI + cyber image) ---------- */
+.data-chart {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+}
+.data-chart .chart-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+.data-chart .chart-subtitle {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0 0 1.1rem !important;
+  line-height: 1.5;
+}
+.data-chart .chart-source {
+  margin: 1rem 0 0 !important;
+  font-size: 0.78rem;
+  color: var(--muted-2) !important;
+  line-height: 1.55;
+}
+.data-chart .chart-source a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+}
+.data-chart .chart-source a:hover { color: var(--text-soft); }
+
+/* ---------- ECI step-line chart ---------- */
+.eci-chart {
+  --c-us: #5fa1ff;
+  --c-china: #ff6f55;
+}
+.eci-chart .swatch-us { background: var(--c-us); }
+.eci-chart .swatch-china { background: var(--c-china); }
+.eci-chart .step-line {
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.eci-chart .step-line.us-line { stroke: var(--c-us); }
+.eci-chart .step-line.china-line { stroke: var(--c-china); }
+.eci-chart .release-dot circle {
+  stroke: var(--surface);
+  stroke-width: 1.25;
+}
+.eci-chart .us-dot circle { fill: var(--c-us); }
+.eci-chart .china-dot circle { fill: var(--c-china); }
+.eci-chart .model-label text {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  paint-order: stroke;
+  stroke: rgba(22, 27, 34, 0.85);
+  stroke-width: 3;
+}
+.eci-chart .us-label text { fill: var(--c-us); }
+.eci-chart .china-label text { fill: var(--c-china); }
+.eci-chart .axis-title {
+  fill: var(--muted-2);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Cyber image figure ---------- */
+.figure-image .chart-stage-image {
+  position: relative;
+  background: #fafbfc;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+.figure-image .chart-stage-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
 /* ---------- Evidence citation block (end-of-section) ---------- */
 .evidence-citation {
   display: block;

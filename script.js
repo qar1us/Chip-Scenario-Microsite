@@ -116,11 +116,7 @@
         (d.estimated ? '<span class="tt-est-flag">est.</span>' : '') +
         '</span></div>' +
       '<div class="tt-row tt-summary"><span class="tt-label">Year</span>' +
-        '<span class="tt-value">' + year + '</span></div>' +
-      '<div class="tt-row tt-summary"><span class="tt-label">Source</span>' +
-        '<a class="tt-source-link" href="' + d.source + '" target="_blank" rel="noopener">' +
-          sourceHost(d.source) +
-        '</a></div>';
+        '<span class="tt-value">' + year + '</span></div>';
 
     tooltip.hidden = false;
     positionTooltip(seg);

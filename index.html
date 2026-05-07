@@ -32,7 +32,7 @@
       <ol class="timeline-list">
         <li><a href="#cyber" data-section="cyber"><span class="dot"></span>Cyber operations</a></li>
         <li><a href="#economic" data-section="economic"><span class="dot"></span>AI Stack</a></li>
-        <li><a href="#distillation" data-section="distillation"><span class="dot"></span>Distillation attacks</a></li>
+        <li><a href="#distillation" data-section="distillation"><span class="dot"></span>Distillation</a></li>
       </ol>
     </div>
   </nav>
@@ -66,7 +66,7 @@
           <span class="btn-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="8" y="8" width="12" height="12" rx="1.5"/></svg>
           </span>
-          <span>Distillation attacks</span>
+          <span>Distillation</span>
         </a>
       </div>
     </header>
@@ -123,10 +123,24 @@
           The PRC was only able to do this due to their large compute reserves. That compute let them train specialized models purpose-built for offensive operations, then run those models at the tempo and scale needed to outpace defenders and hit multiple targets simultaneously.
         </p>
 
-        <aside class="evidence-citation">
-          <p class="evidence-link"><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute &mdash; Evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities</a></p>
-          <p class="evidence-caption">Evaluations from the UK AI Security Institute, showing that model performance on simulated cyber-attack scenarios improves with more compute.</p>
-        </aside>
+        <!-- Cyber capabilities chart (AISI evaluation) -->
+        <figure class="data-chart figure-image cyber-chart">
+          <figcaption class="chart-title">Cyber capabilities and compute: completed steps in a cyberattack simulation per compute spent</figcaption>
+          <p class="chart-subtitle">
+            Y-axis: average number of steps completed.
+            X-axis: compute spent (log of cumulative tokens).
+            Each line is a different frontier model attempting a multi-step cyber-attack simulation; performance scales with compute.
+          </p>
+
+          <div class="chart-stage chart-stage-image">
+            <img src="img/aisi-cyber-capabilities.png"
+                 alt="Line chart from the UK AI Security Institute showing average steps completed against cumulative tokens, on a log scale, for a range of frontier models including GPT-5.5, Mythos Preview, Claude Opus 4.6/4.7, GPT-5.4, GPT-5.4-Cyber, GPT-5.3-Codex, Claude Opus 4.5, GPT-5.1-Codex, Claude Sonnet 4.5/3.7, and GPT-4o."/>
+          </div>
+
+          <p class="chart-source">
+            Source: <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute</a>, evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities. Evaluations show that model performance on simulated cyber-attack scenarios improves with more compute.
+          </p>
+        </figure>
       </div>
     </section>
 
@@ -177,10 +191,107 @@
           </p>
         </div>
 
-        <aside class="evidence-citation">
-          <p class="evidence-link"><a href="https://epoch.ai/data-insights/us-vs-china-eci" target="_blank" rel="noopener">Epoch AI &mdash; U.S. vs. China Effective Compute Index</a></p>
-          <p class="evidence-caption">Analysis from Epoch AI, finding that it takes an average of seven months for Chinese models to catch up to the capabilities of their U.S. counterparts.</p>
-        </aside>
+        <!-- US vs China ECI step-line chart -->
+        <figure class="data-chart eci-chart">
+          <figcaption class="chart-title">Chinese AI models have lagged the U.S. frontier by ~7 months on average since 2023</figcaption>
+          <p class="chart-subtitle">Each step is a new frontier model release; line value is the model&rsquo;s score on Epoch&rsquo;s Capabilities Index (ECI). Higher is more capable.</p>
+
+          <div class="chart-legend" aria-hidden="true">
+            <span class="legend-item"><span class="legend-swatch swatch-us"></span>United States</span>
+            <span class="legend-item"><span class="legend-swatch swatch-china"></span>China</span>
+          </div>
+
+          <div class="chart-stage">
+            <svg class="chart-svg" viewBox="0 0 600 400" role="img" aria-label="Step-line chart of Epoch Capabilities Index over time, U.S. versus China">
+              <!-- Grid lines -->
+              <g class="chart-grid">
+                <line x1="64" y1="320" x2="564" y2="320"/>
+                <line x1="64" y1="267" x2="564" y2="267"/>
+                <line x1="64" y1="214" x2="564" y2="214"/>
+                <line x1="64" y1="161" x2="564" y2="161"/>
+                <line x1="64" y1="108" x2="564" y2="108"/>
+                <line x1="64" y1="55" x2="564" y2="55"/>
+              </g>
+
+              <!-- Y axis labels -->
+              <g class="chart-y-labels">
+                <text x="56" y="320" text-anchor="end" dy="0.32em">100</text>
+                <text x="56" y="267" text-anchor="end" dy="0.32em">110</text>
+                <text x="56" y="214" text-anchor="end" dy="0.32em">120</text>
+                <text x="56" y="161" text-anchor="end" dy="0.32em">130</text>
+                <text x="56" y="108" text-anchor="end" dy="0.32em">140</text>
+                <text x="56" y="55" text-anchor="end" dy="0.32em">150</text>
+              </g>
+              <text x="36" y="36" class="axis-title" text-anchor="start">ECI</text>
+
+              <!-- US step-line (with markers at each release) -->
+              <path class="step-line us-line"
+                    d="M 87 183 L 250 183 L 250 179 L 268 179 L 268 175 L 284 175 L 284 169 L 290 169 L 290 148 L 341 148 L 341 126 L 385 126 L 385 95 L 438 95 L 438 86 L 441 86 L 441 71 L 467 71 L 467 61 L 494 61 L 494 54 L 522 54 L 522 52 L 542 52 L 542 32"/>
+
+              <!-- China step-line -->
+              <path class="step-line china-line"
+                    d="M 168 319 L 179 319 L 179 257 L 204 257 L 204 228 L 282 228 L 282 184 L 344 184 L 344 164 L 401 164 L 401 111 L 461 111 L 461 98 L 487 98 L 487 79 L 516 79"/>
+
+              <!-- US release dots -->
+              <g class="release-dot us-dot">
+                <circle cx="87" cy="183" r="3.5"/>
+                <circle cx="250" cy="179" r="3.5"/>
+                <circle cx="268" cy="175" r="3.5"/>
+                <circle cx="284" cy="169" r="3.5"/>
+                <circle cx="290" cy="148" r="3.5"/>
+                <circle cx="341" cy="126" r="3.5"/>
+                <circle cx="385" cy="95" r="3.5"/>
+                <circle cx="438" cy="86" r="3.5"/>
+                <circle cx="441" cy="71" r="3.5"/>
+                <circle cx="467" cy="61" r="3.5"/>
+                <circle cx="494" cy="54" r="3.5"/>
+                <circle cx="522" cy="52" r="3.5"/>
+                <circle cx="542" cy="32" r="3.5"/>
+              </g>
+
+              <!-- China release dots -->
+              <g class="release-dot china-dot">
+                <circle cx="168" cy="319" r="3.5"/>
+                <circle cx="179" cy="257" r="3.5"/>
+                <circle cx="204" cy="228" r="3.5"/>
+                <circle cx="282" cy="184" r="3.5"/>
+                <circle cx="344" cy="164" r="3.5"/>
+                <circle cx="401" cy="111" r="3.5"/>
+                <circle cx="461" cy="111" r="3.5"/>
+                <circle cx="461" cy="98" r="3.5"/>
+                <circle cx="487" cy="79" r="3.5"/>
+                <circle cx="516" cy="79" r="3.5"/>
+              </g>
+
+              <!-- Selected model labels (US: blue) -->
+              <g class="model-label us-label">
+                <text x="91" y="178" text-anchor="start">GPT-4 (Mar 2023)</text>
+                <text x="381" y="90" text-anchor="end">o1</text>
+                <text x="490" y="49" text-anchor="end">GPT-5</text>
+                <text x="538" y="27" text-anchor="end">Gemini 3 Pro</text>
+              </g>
+
+              <!-- Selected model labels (China: red) -->
+              <g class="model-label china-label">
+                <text x="164" y="324" text-anchor="end">Baichuan2-13B</text>
+                <text x="348" y="178" text-anchor="start">Qwen2.5-72B</text>
+                <text x="405" y="124" text-anchor="start">DeepSeek-R1</text>
+                <text x="520" y="74" text-anchor="start">Qwen3 Max</text>
+              </g>
+
+              <!-- X axis labels -->
+              <g class="chart-x-labels">
+                <text x="223" y="345" text-anchor="middle" dy="0.85em">2024</text>
+                <text x="393" y="345" text-anchor="middle" dy="0.85em">2025</text>
+                <text x="562" y="345" text-anchor="middle" dy="0.85em">2026</text>
+              </g>
+            </svg>
+          </div>
+
+          <p class="chart-source">
+            Source: <a href="https://epoch.ai/data-insights/us-vs-china-eci" target="_blank" rel="noopener">Epoch AI</a>. ECI = Epoch Capabilities Index. Since 2023, Chinese models have trailed U.S. capabilities by 4&ndash;14 months.
+          </p>
+        </figure>
       </div>
     </section>
 
@@ -191,7 +302,7 @@
       </span>
       <div class="scenario-meta">
         <span class="scenario-number">03</span>
-        <span class="scenario-tag">Distillation attacks</span>
+        <span class="scenario-tag">Distillation</span>
       </div>
       <h2>Compute as an Engine of Distillation Attacks and AI IP Theft</h2>
 
@@ -364,6 +475,6 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260507"></script>
 </body>
 </html>
