@@ -2,8 +2,8 @@
   --bg: #0d1117;
   --surface: #161b22;
   --surface-soft: #11161e;
-  --text: #e6edf3;
-  --text-soft: #c9d1d9;
+  --text: #ffffff;
+  --text-soft: #ffffff;
   --muted: #8b949e;
   --muted-2: #6e7681;
   --accent: #f78166;
@@ -14,9 +14,9 @@
   --serif: "Source Serif 4", "Source Serif Pro", "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
 
-  --content-width: 1280px;
+  --content-width: 1440px;
   --main-pad-top: 5rem;
-  --main-pad: 1.25rem;
+  --main-pad: 0.75rem;
 }
 
 * { box-sizing: border-box; }
@@ -28,8 +28,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden;
@@ -241,7 +241,7 @@ h1 {
   margin: 0 0 1.5rem;
 }
 .thesis {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-soft);
   margin: 0 0 2rem;
 }
@@ -305,7 +305,7 @@ h1 {
   --section-accent: #2ea99e;
   --section-accent-rgb: 46, 169, 158;
   border-radius: 20px 20px 8px 8px;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   margin-bottom: 3rem;
   box-shadow:
     0 -1px 0 rgba(255, 255, 255, 0.06),
@@ -317,7 +317,7 @@ h1 {
   --section-accent: #c9922a;
   --section-accent-rgb: 201, 146, 42;
   border-radius: 20px 20px 8px 8px;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   margin-bottom: 3rem;
   box-shadow:
     0 -1px 0 rgba(255, 255, 255, 0.07),
@@ -329,7 +329,7 @@ h1 {
   --section-accent: #4d8fc7;
   --section-accent-rgb: 77, 143, 199;
   border-radius: 20px 20px 8px 8px;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   box-shadow:
     0 -1px 0 rgba(255, 255, 255, 0.08),
     0 -20px 40px rgba(0, 0, 0, 0.4);
@@ -350,6 +350,12 @@ h1 {
 .scenario-col-visual > .data-chart,
 .scenario-col-visual > .compute-chart {
   margin-top: 0;
+}
+
+.scenario-header {
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(var(--section-accent-rgb, 247, 129, 102), 0.25);
 }
 
 .scenario-icon {
@@ -385,18 +391,16 @@ h1 {
 
 h2 {
   font-family: var(--serif);
-  font-size: 1.85rem;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   font-weight: 600;
-  margin: 0 0 1.75rem;
+  margin: 0 0 0;
   color: var(--text);
 }
 
 .scenario-lede {
-  font-size: 1.08rem;
-  color: var(--text);
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.1rem;
 }
 .scenario-body p { margin: 0 0 1.1rem; color: var(--text-soft); }
 
@@ -452,25 +456,18 @@ h2 {
 .vignette-kicker {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
+  gap: 0.5rem;
+  font-size: 0.88rem;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--section-accent, var(--accent));
   margin-bottom: 0.4rem;
 }
-.vignette-kicker::before {
-  content: '';
+.vignette-kicker svg {
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
-  width: 11px;
-  height: 11px;
-  background-color: currentColor;
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M2.5 12 Q12 5 21.5 12 Q12 19 2.5 12zM12 8 a4 4 0 1 1 0 8 a4 4 0 1 1 0-8zM12 10 a2 2 0 1 1 0 4 a2 2 0 1 1 0-4z'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M2.5 12 Q12 5 21.5 12 Q12 19 2.5 12zM12 8 a4 4 0 1 1 0 8 a4 4 0 1 1 0-8zM12 10 a2 2 0 1 1 0 4 a2 2 0 1 1 0-4z'/%3E%3C/svg%3E");
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+  opacity: 0.9;
 }
 .vignette-title {
   display: block;
@@ -608,9 +605,9 @@ h2 {
 /* ---------- Cyber image figure ---------- */
 .figure-image .chart-stage-image {
   position: relative;
-  background: #fafbfc;
+  background: transparent;
   border-radius: 4px;
-  padding: 0.75rem;
+  padding: 0;
 }
 .figure-image .chart-stage-image img {
   display: block;
