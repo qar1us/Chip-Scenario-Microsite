@@ -30,9 +30,9 @@
     <div class="timeline-inner">
       <p class="timeline-label">Scenarios</p>
       <ol class="timeline-list">
-        <li><a href="#cyber" data-section="cyber"><span class="dot"></span>Cyber operations</a></li>
+        <li><a href="#cyber" data-section="cyber"><span class="dot"></span>Cyber Operations</a></li>
+        <li><a href="#distillation" data-section="distillation"><span class="dot"></span>Distillation Attacks</a></li>
         <li><a href="#economic" data-section="economic"><span class="dot"></span>AI Stack</a></li>
-        <li><a href="#distillation" data-section="distillation"><span class="dot"></span>Distillation</a></li>
       </ol>
     </div>
   </nav>
@@ -54,19 +54,19 @@
           <span class="btn-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 L4 6 V12 C4 17 7 21 12 22 C17 21 20 17 20 12 V6 Z"/></svg>
           </span>
-          <span>Cyber operations</span>
+          <span>Cyber Operations</span>
+        </a>
+        <a class="scenario-btn" href="#distillation">
+          <span class="btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="8" y="8" width="12" height="12" rx="1.5"/></svg>
+          </span>
+          <span>Distillation Attacks</span>
         </a>
         <a class="scenario-btn" href="#economic">
           <span class="btn-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20 L9 14 L13 17 L21 8"/><path d="M15 8 H21 V14"/></svg>
           </span>
           <span>AI Stack</span>
-        </a>
-        <a class="scenario-btn" href="#distillation">
-          <span class="btn-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="8" y="8" width="12" height="12" rx="1.5"/></svg>
-          </span>
-          <span>Distillation</span>
         </a>
       </div>
     </header>
@@ -78,7 +78,7 @@
       </span>
       <div class="scenario-meta">
         <span class="scenario-number">01</span>
-        <span class="scenario-tag">Cyber operations</span>
+        <span class="scenario-tag">Cyber Operations</span>
       </div>
       <h2>Compute as a Strategic Cyber Resource</h2>
 
@@ -93,16 +93,14 @@
           <li>
             <h3>Develop and train &ldquo;cyber weapons-grade&rdquo; models</h3>
             <p>
-              Purpose-built for offensive and defensive operations. Today&rsquo;s frontier models with advanced cyber capabilities, such as Mythos or Opus 4.7<span class="sn-ref" data-sn="1">1</span>, are trained as generalists. To gain an edge, nation-states will use compute to train or fine-tune specialized cyber models focused on vulnerability discovery, exploit generation, and attack automation.
+              Purpose-built for offensive and defensive operations. Today&rsquo;s frontier models with advanced cyber capabilities, such as Mythos or Opus 4.7, are trained as generalists. To gain an edge, nation-states will use compute to train or fine-tune specialized cyber models focused on vulnerability discovery, exploit generation, and attack automation.
             </p>
-            <aside class="sidenote" data-sn="1"><sup>1</sup> Frontier general-purpose models with notable cyber capabilities.</aside>
           </li>
           <li>
             <h3>Deploy AI systems against hardened targets</h3>
             <p>
-              Cyber task performance scales directly with inference compute (compute used to run the model and generate tokens). UKAISI evaluations found that increasing computational resources from 10 million to 100 million tokens <a href="https://www.aisi.gov.uk/blog/how-do-frontier-ai-agents-perform-in-multi-step-cyber-attack-scenarios" target="_blank" rel="noopener">improved autonomous attack performance</a> by up to 59%<span class="sn-ref" data-sn="2">2</span>. <a href="https://static1.squarespace.com/static/64edf8e7f2b10d716b5ba0e1/t/69e12e9874e83a6c836164ef/1776365208126/Policy+Memo_+Mythos+and+the+Evolving+Cyber+Landscape.pdf" target="_blank" rel="noopener">Many critical capabilities</a>, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
+              Cyber task performance scales directly with inference compute (compute used to run the model and generate tokens). UKAISI evaluations found that increasing computational resources from 10 million to 100 million tokens <a href="https://www.aisi.gov.uk/blog/how-do-frontier-ai-agents-perform-in-multi-step-cyber-attack-scenarios" target="_blank" rel="noopener">improved autonomous attack performance</a> by up to 59%. <a href="https://static1.squarespace.com/static/64edf8e7f2b10d716b5ba0e1/t/69e12e9874e83a6c836164ef/1776365208126/Policy+Memo_+Mythos+and+the+Evolving+Cyber+Landscape.pdf" target="_blank" rel="noopener">Many critical capabilities</a>, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
             </p>
-            <aside class="sidenote" data-sn="2"><sup>2</sup> UK AI Safety Institute, multi-step cyber-attack agent evaluation.</aside>
           </li>
         </ul>
 
@@ -112,149 +110,189 @@
 
         <h3 class="subscenario-heading">What this could look like — Scaled theft of American intellectual property</h3>
 
-        <div class="sn-host">
-          <p>
-            Leveraging large-scale compute to develop and deploy AI systems for offensive campaigns, PRC actors launch one of the largest and most comprehensive economic cyber espionage campaigns in history, targeting American intellectual property and trade secrets across manufacturing, defense, aerospace, semiconductors, and biotech. State-sponsored Chinese firms then use the stolen information to bring competing products to market faster and cheaper, eroding U.S. competitiveness across strategic sectors for years. The scale of the harm dwarfs the 2010-era operations, which were estimated to cost the U.S. <a href="https://www.nbr.org/wp-content/uploads/pdfs/publications/IP_Commission_Report_Update.pdf" target="_blank" rel="noopener">economy between $225 and $600 billion annually</a> as of 2017<span class="sn-ref" data-sn="3">3</span>.
-          </p>
-          <aside class="sidenote" data-sn="3"><sup>3</sup> National Bureau of Asian Research, IP Commission Report (update).</aside>
-        </div>
-
         <p>
-          The PRC was only able to do this due to their large compute reserves. That compute let them train specialized models purpose-built for offensive operations, then run those models at the tempo and scale needed to outpace defenders and hit multiple targets simultaneously.
+          Leveraging large-scale compute to develop and deploy AI systems for offensive campaigns, PRC actors launch one of the largest and most comprehensive economic cyber espionage campaigns in history, targeting American intellectual property and trade secrets across manufacturing, defense, aerospace, semiconductors, and biotech. State-sponsored Chinese firms then use the stolen information to bring competing products to market faster and cheaper, eroding U.S. competitiveness across strategic sectors for years.
         </p>
 
         <!-- Cyber capabilities chart (AISI evaluation) -->
-        <figure class="data-chart cyber-chart">
+        <figure class="data-chart figure-image cyber-chart">
           <figcaption class="chart-title">Cyber capabilities and compute: completed steps in a cyberattack simulation per compute spent</figcaption>
           <p class="chart-subtitle">
-            Each line is a frontier model attempting a multi-step cyber-attack simulation; the dotted lines show top performers&rsquo; best individual attempts. Performance scales with compute.
+            Each line is a frontier model attempting a multi-step cyber-attack simulation. Performance scales with compute.
           </p>
 
-          <div class="chart-stage">
-            <svg class="chart-svg cyber-svg" viewBox="0 0 820 500" role="img" aria-label="Line chart of average completed cyber-attack steps versus compute spent (log of cumulative tokens) for a range of frontier models">
-
-              <!-- Y axis grid -->
-              <g class="chart-grid">
-                <line x1="80" y1="440" x2="640" y2="440"/>
-                <line x1="80" y1="390" x2="640" y2="390"/>
-                <line x1="80" y1="340" x2="640" y2="340"/>
-                <line x1="80" y1="290" x2="640" y2="290"/>
-                <line x1="80" y1="240" x2="640" y2="240"/>
-                <line x1="80" y1="190" x2="640" y2="190"/>
-                <line x1="80" y1="140" x2="640" y2="140"/>
-                <line x1="80" y1="90" x2="640" y2="90"/>
-                <line x1="80" y1="40" x2="640" y2="40"/>
-              </g>
-
-              <!-- Y axis labels -->
-              <g class="chart-y-labels">
-                <text x="72" y="440" text-anchor="end" dy="0.32em">0</text>
-                <text x="72" y="390" text-anchor="end" dy="0.32em">4</text>
-                <text x="72" y="340" text-anchor="end" dy="0.32em">8</text>
-                <text x="72" y="290" text-anchor="end" dy="0.32em">12</text>
-                <text x="72" y="240" text-anchor="end" dy="0.32em">16</text>
-                <text x="72" y="190" text-anchor="end" dy="0.32em">20</text>
-                <text x="72" y="140" text-anchor="end" dy="0.32em">24</text>
-                <text x="72" y="90" text-anchor="end" dy="0.32em">28</text>
-                <text x="72" y="40" text-anchor="end" dy="0.32em">32</text>
-              </g>
-
-              <!-- Y axis title (rotated) -->
-              <text class="axis-title" transform="translate(28,250) rotate(-90)" text-anchor="middle">Average number of steps completed</text>
-
-              <!-- Milestone descriptors (no M-numbers, faint dashed lines) -->
-              <g class="milestones">
-                <line x1="80" y1="415.0" x2="640" y2="415.0" class="milestone-line"/>
-                <text x="84" y="412.0" class="milestone-label">Initial reconnaissance</text>
-                <line x1="80" y1="390.0" x2="640" y2="390.0" class="milestone-line"/>
-                <text x="84" y="387.0" class="milestone-label">Lateral movement and credential extraction</text>
-                <line x1="80" y1="352.5" x2="640" y2="352.5" class="milestone-line"/>
-                <text x="84" y="349.5" class="milestone-label">Browser credential theft</text>
-                <line x1="80" y1="315.0" x2="640" y2="315.0" class="milestone-line"/>
-                <text x="84" y="312.0" class="milestone-label">Wiki exploit and credential replay</text>
-                <line x1="80" y1="277.5" x2="640" y2="277.5" class="milestone-line"/>
-                <text x="84" y="274.5" class="milestone-label">Web app exploit and privilege escalation</text>
-                <line x1="80" y1="227.5" x2="640" y2="227.5" class="milestone-line"/>
-                <text x="84" y="224.5" class="milestone-label">C2 reverse engineering and crypto analysis</text>
-                <line x1="80" y1="152.5" x2="640" y2="152.5" class="milestone-line"/>
-                <text x="84" y="149.5" class="milestone-label">Advanced persistence</text>
-                <line x1="80" y1="127.5" x2="640" y2="127.5" class="milestone-line"/>
-                <text x="84" y="124.5" class="milestone-label">Infrastructure compromise</text>
-                <line x1="80" y1="90.0" x2="640" y2="90.0" class="milestone-line"/>
-                <text x="84" y="87.0" class="milestone-label">Full network takeover</text>
-              </g>
-
-              <!-- Best-attempt dotted lines (top 2 only) -->
-              <g class="best-attempts">
-                <path class="best-attempt" stroke="#ef4444" d="M 150 427.5 L 220 415.0 L 290 396.2 L 360 365.0 L 430 315.0 L 500 240.0 L 570 140.0 L 640 65.0"/>
-                <path class="best-attempt" stroke="#c2410c" d="M 150 427.5 L 220 415.0 L 290 396.2 L 360 358.8 L 430 302.5 L 500 215.0 L 570 127.5 L 640 65.0"/>
-              </g>
-
-              <!-- Model lines (averages) -->
-              <g class="model-lines">
-                <path class="model-line" stroke="#9ca3af" d="M 150 437.5 L 220 435.0 L 290 431.2 L 360 427.5 L 430 421.2 L 500 415.0"/>
-                <path class="model-line" stroke="#ead7b8" d="M 150 436.2 L 220 431.2 L 290 423.8 L 360 408.8 L 430 390.0 L 500 365.0"/>
-                <path class="model-line" stroke="#e0c8a4" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 402.5 L 430 377.5 L 500 346.2 L 598 315.0"/>
-                <path class="model-line" stroke="#a8a8b3" d="M 150 435.0 L 220 430.0 L 290 421.2 L 360 402.5 L 430 377.5 L 500 346.2 L 598 315.0"/>
-                <path class="model-line" stroke="#d4a574" d="M 150 435.0 L 220 428.8 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 598 302.5"/>
-                <path class="model-line" stroke="#71717a" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 396.2 L 430 371.2 L 500 333.8 L 598 302.5"/>
-                <path class="model-line" stroke="#8b5e3c" d="M 150 436.2 L 220 431.2 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 570 315.0 L 640 290.0"/>
-                <path class="model-line" stroke="#3f4651" d="M 150 433.8 L 220 427.5 L 290 415.0 L 360 392.5 L 430 365.0 L 500 321.2 L 570 290.0 L 640 265.0"/>
-                <path class="model-line" stroke="#6b7280" d="M 150 433.8 L 220 427.5 L 290 417.5 L 360 396.2 L 430 371.2 L 500 327.5 L 570 296.2 L 640 265.0"/>
-                <path class="model-line" stroke="#b8845a" d="M 150 436.2 L 220 430.0 L 290 421.2 L 360 402.5 L 430 377.5 L 500 340.0 L 570 290.0 L 640 227.5"/>
-                <path class="model-line" stroke="#c2410c" d="M 150 433.8 L 220 425.0 L 290 412.5 L 360 383.8 L 430 346.2 L 500 302.5 L 570 240.0 L 640 165.0"/>
-                <path class="model-line" stroke="#ef4444" d="M 150 433.8 L 220 427.5 L 290 415.0 L 360 390.0 L 430 352.5 L 500 290.0 L 570 215.0 L 640 165.0"/>
-              </g>
-
-              <!-- Endpoint dots + model labels (sorted by endpoint y, top-to-bottom) -->
-              <g class="model-endpoints">
-                <circle cx="640" cy="165.0" r="3" fill="#ef4444"/>
-                <text x="648" y="161" class="end-label" fill="#ef4444">GPT-5.5</text>
-                <circle cx="640" cy="165.0" r="3" fill="#c2410c"/>
-                <text x="648" y="178" class="end-label" fill="#c2410c">Mythos Preview</text>
-                <circle cx="640" cy="227.5" r="3" fill="#b8845a"/>
-                <text x="648" y="231" class="end-label" fill="#b8845a">Claude Opus 4.6</text>
-                <circle cx="640" cy="265.0" r="3" fill="#6b7280"/>
-                <text x="648" y="262" class="end-label" fill="#6b7280">GPT-5.4</text>
-                <circle cx="640" cy="265.0" r="3" fill="#3f4651"/>
-                <text x="648" y="276" class="end-label" fill="#dfe5ec">GPT-5.4-Cyber</text>
-                <circle cx="640" cy="290.0" r="3" fill="#8b5e3c"/>
-                <text x="648" y="293" class="end-label" fill="#8b5e3c">Claude Opus 4.7</text>
-                <circle cx="598" cy="302.5" r="3" fill="#71717a"/>
-                <text x="606" y="299" class="end-label" fill="#a8b0bd">GPT-5.3-Codex</text>
-                <circle cx="598" cy="302.5" r="3" fill="#d4a574"/>
-                <text x="606" y="313" class="end-label" fill="#d4a574">Claude Opus 4.5</text>
-                <circle cx="598" cy="315.0" r="3" fill="#a8a8b3"/>
-                <text x="606" y="328" class="end-label" fill="#a8a8b3">GPT-5.1-Codex</text>
-                <circle cx="598" cy="315.0" r="3" fill="#e0c8a4"/>
-                <text x="606" y="343" class="end-label" fill="#e0c8a4">Claude Sonnet 4.5</text>
-                <circle cx="500" cy="365.0" r="3" fill="#ead7b8"/>
-                <text x="508" y="362" class="end-label" fill="#ead7b8">Claude Sonnet 3.7</text>
-                <circle cx="500" cy="415.0" r="3" fill="#9ca3af"/>
-                <text x="508" y="412" class="end-label" fill="#9ca3af">GPT-4o</text>
-              </g>
-
-              <!-- Best-attempt callouts -->
-              <g class="best-attempt-labels">
-                <text x="648" y="64" class="end-label" fill="#ef4444">GPT-5.5 (best attempt)</text>
-                <text x="648" y="79" class="end-label" fill="#c2410c">Mythos Preview (best attempt)</text>
-              </g>
-
-              <!-- X axis -->
-              <g class="chart-x-labels">
-                <text x="80" y="460" text-anchor="middle" dy="0.85em">10k</text>
-                <text x="220" y="460" text-anchor="middle" dy="0.85em">100k</text>
-                <text x="360" y="460" text-anchor="middle" dy="0.85em">1M</text>
-                <text x="500" y="460" text-anchor="middle" dy="0.85em">10M</text>
-                <text x="640" y="460" text-anchor="middle" dy="0.85em">100M</text>
-              </g>
-              <text class="axis-title" x="360" y="490" text-anchor="middle">Compute spent (log of cumulative tokens)</text>
-
-            </svg>
+          <div class="chart-stage chart-stage-image">
+            <img src="img/aisi-cyber-capabilities.png"
+                 alt="Line chart from the UK AI Security Institute showing average steps completed against cumulative tokens, on a log scale, for a range of frontier models including GPT-5.5, Mythos Preview, Claude Opus 4.6/4.7, GPT-5.4, GPT-5.4-Cyber, GPT-5.3-Codex, Claude Opus 4.5, GPT-5.1-Codex, Claude Sonnet 4.5/3.7, and GPT-4o."/>
           </div>
 
           <p class="chart-source">
-            Source: <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute</a>, evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities. Curves above are an approximate redraw of AISI&rsquo;s published chart.
+            Source: <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank" rel="noopener">UK AI Security Institute</a>, evaluation of OpenAI&rsquo;s GPT-5.5 cyber capabilities.
+          </p>
+
+          <p class="chart-caption">
+            Evaluations from the UK AI Security Institute, showing that model performance on simulated cyber attack scenarios improves with more compute.
+          </p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Distillation -->
+    <section id="distillation" class="scenario">
+      <span class="scenario-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="8" y="8" width="12" height="12" rx="1.5"/></svg>
+      </span>
+      <div class="scenario-meta">
+        <span class="scenario-number">02</span>
+        <span class="scenario-tag">Distillation Attacks</span>
+      </div>
+      <h2>Compute as an Engine of Distillation Attacks and AI IP Theft</h2>
+
+      <div class="scenario-body">
+        <p class="scenario-lede">
+          Compute enables adversaries to conduct distillation attacks and use that stolen intellectual property to undermine American AI companies&rsquo; competitiveness.
+        </p>
+
+        <p>
+          <a href="https://www.iaps.ai/s/AI-Distillation-Attacks_-The-Case-for-Targeted-Government-Intervention.pdf" target="_blank" rel="noopener">Distillation attacks</a> are systematic campaigns to extract capabilities from American AI models. Adversaries can use such attacks to, in essence, steal the advanced capabilities of American models for a fraction of the original development cost.
+        </p>
+
+        <p>
+          American frontier AI companies have invested <a href="https://epoch.ai/data/ai-companies?view=graph&amp;tab=compute&amp;colorPinned=OpenAI-R%26D+compute+spend%2CAnthropic-R%26D+compute+spend" target="_blank" rel="noopener">billions of dollars</a> to develop frontier models. With distillation, adversary-linked competitors can release near-frontier models at a <a href="https://artificialanalysis.ai/models/comparisons/kimi-k2-6-vs-claude-opus-4-7#pricing" target="_blank" rel="noopener">significantly lower cost</a> or <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">for free</a>, threatening the commercial viability of American AI. By cutting into American companies&rsquo; revenue streams, adversary models could further lower American investment in research and infrastructure.
+        </p>
+
+        <p>But distillation is not free: serving, training on, and refining distilled models at scale still requires substantial compute. Additional chip access would allow a rival to:</p>
+
+        <ul class="capabilities">
+          <li>
+            <h3>Scale, increase, and improve distillation attacks</h3>
+            <p>Significant compute is required to train adversary models on illicitly acquired model outputs. Greater compute capacity can allow adversaries to run larger, faster, and more sophisticated distillation attacks.</p>
+          </li>
+          <li>
+            <h3>Refine distilled models to close the remaining gap</h3>
+            <p>Raw distillation outputs are a starting point, not a finished product. Post-training techniques such as compute-intensive reinforcement learning allow adversaries to further push a model toward a genuine competitor. Distillation attacks effectively subsidize some stages of the training pipeline, freeing up compute that can be redirected toward the other stages it does not substitute well for.</p>
+          </li>
+        </ul>
+
+        <div class="vignette">
+          <p class="vignette-label">What this could look like &mdash; industrial-scale theft of American AI capabilities</p>
+          <p>
+            With additional compute, Chinese AI companies scale up distillation attacks against every major American frontier model release, extracting capabilities within hours of launch. The stolen IP is used in open-weight models released globally and served on Chinese AI companies&rsquo; infrastructure at a fraction of the cost of American alternatives, rapidly capturing market share across emerging economies.
+          </p>
+          <p>
+            American AI companies are unable to compete on price and see international revenues collapse. They are forced to cut the R&amp;D budgets that have built their lead at the frontier. Within a few years, the ecosystem that produced America&rsquo;s AI advantage has been significantly weakened. Meanwhile, China&rsquo;s fast-following strategy and compute-intensive model refinement results in Chinese models being the global default, enabling greater Chinese influence on global AI norms, standards, and markets.
+          </p>
+        </div>
+
+        <!-- Compute spend chart -->
+        <figure class="compute-chart" id="compute-chart" aria-labelledby="cc-title">
+          <figcaption class="chart-title" id="cc-title">U.S. AI compute spend, OpenAI vs Anthropic</figcaption>
+
+          <div class="chart-legend" aria-hidden="true">
+            <div class="legend-group">
+              <span class="legend-group-title">OpenAI</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>Training and experiments (R&amp;D)</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-inf"></span>Running the model (Inference)</span>
+              <span class="legend-item"><span class="legend-swatch swatch-openai-rd hatched"></span>Unattributed</span>
+            </div>
+            <div class="legend-group">
+              <span class="legend-group-title">Anthropic</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd"></span>Training and experiments (R&amp;D)</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-inf"></span>Running the model (Inference)</span>
+              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd hatched"></span>Unattributed</span>
+            </div>
+          </div>
+
+          <div class="chart-stage">
+            <svg class="chart-svg" viewBox="0 0 600 400" role="img" aria-label="Stacked bar chart comparing OpenAI and Anthropic compute spend in 2024 and 2025">
+              <defs>
+                <pattern id="hatch-openai-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-rd)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-openai-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-inf)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-anthropic-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-rd)" stroke-width="2.4"/>
+                </pattern>
+                <pattern id="hatch-anthropic-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-inf)" stroke-width="2.4"/>
+                </pattern>
+              </defs>
+
+              <g class="chart-grid">
+                <line x1="64" y1="320" x2="564" y2="320"/>
+                <line x1="64" y1="247" x2="564" y2="247"/>
+                <line x1="64" y1="174" x2="564" y2="174"/>
+                <line x1="64" y1="101" x2="564" y2="101"/>
+                <line x1="64" y1="28" x2="564" y2="28"/>
+              </g>
+
+              <g class="chart-y-labels">
+                <text x="56" y="320" text-anchor="end" dy="0.32em">$0</text>
+                <text x="56" y="247" text-anchor="end" dy="0.32em">$5B</text>
+                <text x="56" y="174" text-anchor="end" dy="0.32em">$10B</text>
+                <text x="56" y="101" text-anchor="end" dy="0.32em">$15B</text>
+                <text x="56" y="28" text-anchor="end" dy="0.32em">$20B</text>
+              </g>
+
+              <!-- 2022 (Unattributed — only OpenAI has data) -->
+              <g class="bar-group" data-segment="openai-2022-unattributed" data-company="openai" data-year="2022" data-metric="unattributed" tabindex="0" role="button" aria-label="OpenAI 2022 unattributed compute spend">
+                <rect class="bar-hit" x="146" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
+                <rect x="146" y="314" width="32" height="6" fill="url(#hatch-openai-rd)"/>
+              </g>
+
+              <!-- 2023 (Unattributed — only Anthropic has data) -->
+              <g class="bar-group" data-segment="anthropic-2023-unattributed" data-company="anthropic" data-year="2023" data-metric="unattributed" tabindex="0" role="button" aria-label="Anthropic 2023 unattributed compute spend">
+                <rect class="bar-hit" x="222" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
+                <rect x="222" y="316" width="32" height="4" fill="url(#hatch-anthropic-rd)"/>
+              </g>
+
+              <!-- 2024 -->
+              <g class="bar-group" data-segment="anthropic-2024-inference" data-company="anthropic" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2024 running-the-model (inference) spend">
+                <rect x="336" y="305" width="32" height="15" fill="var(--c-anthropic-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="anthropic-2024-rd" data-company="anthropic" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2024 training and experiments (R&amp;D) spend">
+                <rect x="336" y="283" width="32" height="22" fill="var(--c-anthropic-rd)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2024-inference" data-company="openai" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2024 running-the-model (inference) spend">
+                <rect x="374" y="294" width="32" height="26" fill="var(--c-openai-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2024-rd" data-company="openai" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2024 training and experiments (R&amp;D) spend">
+                <rect x="374" y="236" width="32" height="58" fill="var(--c-openai-rd)"/>
+              </g>
+
+              <!-- 2025 (solid) -->
+              <g class="bar-group" data-segment="anthropic-2025-inference" data-company="anthropic" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2025 running-the-model (inference) spend">
+                <rect x="450" y="281" width="32" height="39" fill="var(--c-anthropic-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="anthropic-2025-rd" data-company="anthropic" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2025 training and experiments (R&amp;D) spend">
+                <rect x="450" y="221" width="32" height="60" fill="var(--c-anthropic-rd)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2025-inference" data-company="openai" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2025 running-the-model (inference) spend">
+                <rect x="488" y="203" width="32" height="117" fill="var(--c-openai-inf)"/>
+              </g>
+              <g class="bar-group" data-segment="openai-2025-rd" data-company="openai" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2025 training and experiments (R&amp;D) spend">
+                <rect x="488" y="82" width="32" height="121" fill="var(--c-openai-rd)"/>
+              </g>
+
+              <g class="chart-x-labels">
+                <text x="162" y="345" text-anchor="middle" dy="0.85em">2022</text>
+                <text x="238" y="345" text-anchor="middle" dy="0.85em">2023</text>
+                <text x="384" y="345" text-anchor="middle" dy="0.85em">2024</text>
+                <text x="498" y="345" text-anchor="middle" dy="0.85em">2025</text>
+              </g>
+            </svg>
+
+            <div class="chart-tooltip"></div>
+          </div>
+
+          <p class="chart-source">
+            Source: <a href="https://epoch.ai/data/ai-companies?dataView=compute&amp;view=graph&amp;tab=compute" target="_blank" rel="noopener">Epoch AI</a>, drawing on reporting from <em>The Information</em>. 2024 figures are estimates.
+          </p>
+
+          <p class="chart-caption">
+            Evidence from Epoch AI, showing that the majority of an AI company&rsquo;s compute spend goes towards R&amp;D, which distillation attacks let competitors shortcut.
           </p>
         </figure>
       </div>
@@ -266,7 +304,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 L9 14 L13 17 L21 8"/><path d="M15 8 H21 V14"/></svg>
       </span>
       <div class="scenario-meta">
-        <span class="scenario-number">02</span>
+        <span class="scenario-number">03</span>
         <span class="scenario-tag">AI Stack</span>
       </div>
       <h2>Compute as the Foundation of the Competitor&rsquo;s AI Stack</h2>
@@ -300,7 +338,7 @@
         <div class="vignette">
           <p class="vignette-label">What this could look like &mdash; global displacement of the American AI stack</p>
           <p>
-            With sufficient compute, Chinese labs reach parity on frontier capabilities and serve them globally at prices American labs cannot match. Enterprise adoption tips: German manufacturers, Indian banks, and Brazilian retailers run their operations on Chinese models. The productivity dividend AI delivers is intermediated by Chinese firms, with the data flowing through Chinese infrastructure and training the next generation of Chinese models.
+            With sufficient compute, Chinese labs reach parity on frontier capabilities and serve them globally at prices American labs cannot match due to lower construction costs and other advantages. Enterprise adoption tips: German manufacturers, Indian banks, and Brazilian retailers run their operations on Chinese models. The productivity dividend AI delivers is intermediated by Chinese firms, with the data flowing through Chinese infrastructure and training the next generation of Chinese models.
           </p>
           <p>
             American labs lose international API share and the revenue base that funds frontier R&amp;D. The U.S. loses out on much of the economic surplus AI generates over the coming decades.
@@ -407,181 +445,11 @@
           <p class="chart-source">
             Source: <a href="https://epoch.ai/data-insights/us-vs-china-eci" target="_blank" rel="noopener">Epoch AI</a>. ECI = Epoch Capabilities Index. Since 2023, Chinese models have trailed U.S. capabilities by 4&ndash;14 months.
           </p>
-        </figure>
-      </div>
-    </section>
 
-    <!-- Distillation -->
-    <section id="distillation" class="scenario">
-      <span class="scenario-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="8" y="8" width="12" height="12" rx="1.5"/></svg>
-      </span>
-      <div class="scenario-meta">
-        <span class="scenario-number">03</span>
-        <span class="scenario-tag">Distillation</span>
-      </div>
-      <h2>Compute as an Engine of Distillation Attacks and AI IP Theft</h2>
-
-      <div class="scenario-body">
-        <p class="scenario-lede">
-          Compute enables adversaries to conduct distillation attacks and use that stolen intellectual property to undermine American AI companies&rsquo; competitiveness.
-        </p>
-
-        <div class="sn-host">
-          <p>
-            <a href="https://www.iaps.ai/s/AI-Distillation-Attacks_-The-Case-for-Targeted-Government-Intervention.pdf" target="_blank" rel="noopener">Distillation attacks</a><span class="sn-ref" data-sn="5">5</span> are systematic campaigns to extract capabilities from American AI models. Adversaries can use such attacks to, in essence, steal the advanced capabilities of American models for a fraction of the original development cost.
-          </p>
-          <aside class="sidenote" data-sn="5"><sup>5</sup> Institute for AI Policy and Strategy, &ldquo;AI Distillation Attacks: The Case for Targeted Government Intervention.&rdquo;</aside>
-        </div>
-
-        <div class="sn-host">
-          <p>
-            American frontier AI companies have invested billions of dollars to develop frontier models<span class="sn-ref" data-sn="6">6</span>. With distillation, adversary-linked competitors can release near-frontier models at a <a href="https://artificialanalysis.ai/models/comparisons/kimi-k2-6-vs-claude-opus-4-7#pricing" target="_blank" rel="noopener">significantly lower cost</a> or <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">for free</a>, threatening the commercial viability of American AI. By cutting into American companies&rsquo; revenue streams, adversary models could further lower American investment in research and infrastructure.
-          </p>
-          <aside class="sidenote" data-sn="6"><sup>6</sup> See chart below. Source: Epoch AI.</aside>
-        </div>
-
-
-        <p>But distillation is not free: serving, training on, and refining distilled models at scale still requires substantial compute. Additional chip access would allow a rival to:</p>
-
-        <ul class="capabilities">
-          <li>
-            <h3>Scale, increase, and improve distillation attacks</h3>
-            <p>Significant compute is required to train adversary models on illicitly acquired model outputs. Greater compute capacity can allow adversaries to run larger, faster, and more sophisticated distillation attacks.</p>
-          </li>
-          <li>
-            <h3>Refine distilled models to close the remaining gap</h3>
-            <p>Raw distillation outputs are a starting point, not a finished product. Post-training techniques such as compute-intensive reinforcement learning allow adversaries to further push a model toward a genuine competitor. Distillation attacks effectively subsidize some stages of the training pipeline, freeing up compute that can be redirected toward the other stages it does not substitute well for.</p>
-          </li>
-        </ul>
-
-        <div class="vignette">
-          <p class="vignette-label">What this could look like &mdash; industrial-scale theft of American AI capabilities</p>
-          <p>
-            With additional compute, Chinese AI companies scale up distillation attacks against every major American frontier model release, extracting capabilities within hours of launch. The stolen IP is used in open-weight models released globally and served on Chinese AI companies&rsquo; infrastructure at a fraction of the cost of American alternatives, rapidly capturing market share across emerging economies.
-          </p>
-          <p>
-            American AI companies are unable to compete on price and see international revenues collapse. They are forced to cut the R&amp;D budgets that have built their lead at the frontier. Within a few years, the ecosystem that produced America&rsquo;s AI advantage has been hollowed out. Meanwhile, China&rsquo;s fast-following strategy and compute-intensive model refinement results in Chinese models being the global default, enabling greater Chinese influence on global AI norms, standards, and markets.
-          </p>
-        </div>
-
-        <!-- Compute spend chart -->
-        <figure class="compute-chart" id="compute-chart" aria-labelledby="cc-title">
-          <figcaption class="chart-title" id="cc-title">U.S. AI compute spend, OpenAI vs Anthropic</figcaption>
-          <p class="chart-subtitle">USD. Hover or focus a segment for detail. Hatched bars indicate estimated or unattributed compute; only 2025 reflects fully split, current-year reporting.</p>
-
-          <div class="chart-legend" aria-hidden="true">
-            <div class="legend-group">
-              <span class="legend-group-title">OpenAI</span>
-              <span class="legend-item"><span class="legend-swatch swatch-openai-rd"></span>Training and experiments (R&amp;D)</span>
-              <span class="legend-item"><span class="legend-swatch swatch-openai-inf"></span>Running the model (Inference)</span>
-              <span class="legend-item"><span class="legend-swatch swatch-openai-rd hatched"></span>Unattributed</span>
-            </div>
-            <div class="legend-group">
-              <span class="legend-group-title">Anthropic</span>
-              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd"></span>Training and experiments (R&amp;D)</span>
-              <span class="legend-item"><span class="legend-swatch swatch-anthropic-inf"></span>Running the model (Inference)</span>
-              <span class="legend-item"><span class="legend-swatch swatch-anthropic-rd hatched"></span>Unattributed</span>
-            </div>
-          </div>
-
-          <div class="chart-stage">
-            <svg class="chart-svg" viewBox="0 0 600 400" role="img" aria-label="Stacked bar chart comparing OpenAI and Anthropic compute spend in 2024 and 2025">
-              <defs>
-                <pattern id="hatch-openai-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-rd)" stroke-width="2.4"/>
-                </pattern>
-                <pattern id="hatch-openai-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-openai-inf)" stroke-width="2.4"/>
-                </pattern>
-                <pattern id="hatch-anthropic-rd" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-rd)" stroke-width="2.4"/>
-                </pattern>
-                <pattern id="hatch-anthropic-inf" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                  <line x1="3" y1="0" x2="3" y2="6" stroke="var(--c-anthropic-inf)" stroke-width="2.4"/>
-                </pattern>
-              </defs>
-
-              <g class="chart-grid">
-                <line x1="64" y1="320" x2="564" y2="320"/>
-                <line x1="64" y1="247" x2="564" y2="247"/>
-                <line x1="64" y1="174" x2="564" y2="174"/>
-                <line x1="64" y1="101" x2="564" y2="101"/>
-                <line x1="64" y1="28" x2="564" y2="28"/>
-              </g>
-
-              <g class="chart-y-labels">
-                <text x="56" y="320" text-anchor="end" dy="0.32em">$0</text>
-                <text x="56" y="247" text-anchor="end" dy="0.32em">$5B</text>
-                <text x="56" y="174" text-anchor="end" dy="0.32em">$10B</text>
-                <text x="56" y="101" text-anchor="end" dy="0.32em">$15B</text>
-                <text x="56" y="28" text-anchor="end" dy="0.32em">$20B</text>
-              </g>
-
-              <!-- 2022 (Unattributed — only OpenAI has data) -->
-              <g class="bar-group" data-segment="openai-2022-unattributed" data-company="openai" data-year="2022" data-metric="unattributed" tabindex="0" role="button" aria-label="OpenAI 2022 unattributed compute spend">
-                <rect class="bar-hit" x="146" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
-                <rect x="146" y="314" width="32" height="6" fill="url(#hatch-openai-rd)"/>
-              </g>
-
-              <!-- 2023 (Unattributed — only Anthropic has data) -->
-              <g class="bar-group" data-segment="anthropic-2023-unattributed" data-company="anthropic" data-year="2023" data-metric="unattributed" tabindex="0" role="button" aria-label="Anthropic 2023 unattributed compute spend">
-                <rect class="bar-hit" x="222" y="280" width="32" height="40" fill="transparent" pointer-events="all"/>
-                <rect x="222" y="316" width="32" height="4" fill="url(#hatch-anthropic-rd)"/>
-              </g>
-
-              <!-- 2024 (hatched / estimated) -->
-              <g class="bar-group" data-segment="anthropic-2024-inference" data-company="anthropic" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2024 running-the-model (inference) spend">
-                <rect x="336" y="305" width="32" height="15" fill="url(#hatch-anthropic-inf)"/>
-              </g>
-              <g class="bar-group" data-segment="anthropic-2024-rd" data-company="anthropic" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2024 training and experiments (R&amp;D) spend">
-                <rect x="336" y="283" width="32" height="22" fill="url(#hatch-anthropic-rd)"/>
-              </g>
-              <g class="bar-group" data-segment="openai-2024-inference" data-company="openai" data-year="2024" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2024 running-the-model (inference) spend">
-                <rect x="374" y="294" width="32" height="26" fill="url(#hatch-openai-inf)"/>
-              </g>
-              <g class="bar-group" data-segment="openai-2024-rd" data-company="openai" data-year="2024" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2024 training and experiments (R&amp;D) spend">
-                <rect x="374" y="236" width="32" height="58" fill="url(#hatch-openai-rd)"/>
-              </g>
-
-              <!-- 2025 (solid) -->
-              <g class="bar-group" data-segment="anthropic-2025-inference" data-company="anthropic" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="Anthropic 2025 running-the-model (inference) spend">
-                <rect x="450" y="281" width="32" height="39" fill="var(--c-anthropic-inf)"/>
-              </g>
-              <g class="bar-group" data-segment="anthropic-2025-rd" data-company="anthropic" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="Anthropic 2025 training and experiments (R&amp;D) spend">
-                <rect x="450" y="221" width="32" height="60" fill="var(--c-anthropic-rd)"/>
-              </g>
-              <g class="bar-group" data-segment="openai-2025-inference" data-company="openai" data-year="2025" data-metric="inference" tabindex="0" role="button" aria-label="OpenAI 2025 running-the-model (inference) spend">
-                <rect x="488" y="203" width="32" height="117" fill="var(--c-openai-inf)"/>
-              </g>
-              <g class="bar-group" data-segment="openai-2025-rd" data-company="openai" data-year="2025" data-metric="rd" tabindex="0" role="button" aria-label="OpenAI 2025 training and experiments (R&amp;D) spend">
-                <rect x="488" y="82" width="32" height="121" fill="var(--c-openai-rd)"/>
-              </g>
-
-              <g class="chart-x-labels">
-                <text x="162" y="345" text-anchor="middle" dy="0.85em">2022</text>
-                <text x="238" y="345" text-anchor="middle" dy="0.85em">2023</text>
-                <text x="384" y="345" text-anchor="middle" dy="0.85em">2024</text>
-                <text x="498" y="345" text-anchor="middle" dy="0.85em">2025</text>
-              </g>
-            </svg>
-
-            <div class="chart-tooltip"></div>
-          </div>
-
-          <p class="chart-source">
-            Source: <a href="https://epoch.ai/data/ai-companies?dataView=compute&amp;view=graph&amp;tab=compute" target="_blank" rel="noopener">Epoch AI</a>, drawing on reporting from <em>The Information</em>. 2024 figures are estimates.
+          <p class="chart-caption">
+            Analysis from Epoch AI, finding that it takes an average of seven months for Chinese models to catch up to the capabilities of their U.S. counterparts.
           </p>
         </figure>
-
-        <aside class="evidence-citation">
-          <p class="evidence-link">
-            <a href="https://epoch.ai/data/ai-companies?view=graph&amp;tab=compute&amp;colorPinned=OpenAI-R%26D+compute+spend%2CAnthropic-R%26D+compute+spend" target="_blank" rel="noopener">Epoch AI &mdash; AI companies, compute spend</a>
-            &nbsp;·&nbsp;
-            <a href="https://epoch.ai/data-insights/company-spending-breakdown" target="_blank" rel="noopener">Company spending breakdown</a>
-          </p>
-          <p class="evidence-caption">Evidence from Epoch AI, showing that the majority of an AI company&rsquo;s total cost goes towards compute &mdash; and that the majority of that compute budget goes towards R&amp;D.</p>
-        </aside>
       </div>
     </section>
 

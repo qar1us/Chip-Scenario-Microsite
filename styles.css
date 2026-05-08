@@ -155,6 +155,13 @@ main {
   /* Reserve space on right for sidenotes */
   padding-right: calc(var(--sidenote-width) + var(--sidenote-gap) + 1.5rem);
 }
+/* Whenever the timeline nav is visible, ensure main clears it */
+@media (min-width: 945px) {
+  main {
+    margin-left: max(calc(var(--nav-width) + 1.5rem), calc((100vw - var(--content-width)) / 2));
+    margin-right: auto;
+  }
+}
 
 /* ---------- Hero ---------- */
 .hero {
@@ -466,92 +473,26 @@ h2 {
   text-transform: uppercase;
 }
 
-/* ---------- Cyber capabilities chart (re-drawn SVG) ---------- */
-.cyber-chart .chart-svg {
+/* ---------- Cyber capabilities chart (image) ---------- */
+.figure-image .chart-stage-image {
+  position: relative;
+  background: #fafbfc;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+.figure-image .chart-stage-image img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  font-family: var(--sans);
+  border-radius: 2px;
 }
-.cyber-chart .chart-grid line {
-  stroke: var(--rule-soft);
-  stroke-width: 0.75;
-}
-.cyber-chart .chart-y-labels text,
-.cyber-chart .chart-x-labels text {
-  fill: var(--muted-2);
-  font-size: 11px;
-}
-.cyber-chart .axis-title {
-  fill: var(--muted);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-}
-.cyber-chart .milestone-line {
-  stroke: var(--rule-soft);
-  stroke-width: 0.5;
-  stroke-dasharray: 3 3;
-  opacity: 0.5;
-}
-.cyber-chart .milestone-label {
-  fill: var(--muted-2);
-  font-size: 9.5px;
+
+/* ---------- Chart caption (below chart, restating the takeaway) ---------- */
+.chart-caption {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
   font-style: italic;
-  letter-spacing: 0.02em;
-  opacity: 0.85;
-}
-.cyber-chart .model-line {
-  fill: none;
-  stroke-width: 1.6;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-.cyber-chart .best-attempt {
-  fill: none;
-  stroke-width: 1.2;
-  stroke-dasharray: 3 3;
-  stroke-linejoin: round;
-  opacity: 0.7;
-}
-.cyber-chart .end-label {
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-}
-.cyber-chart .model-endpoints circle {
-  stroke: var(--surface);
-  stroke-width: 1;
-}
-
-/* On narrow viewports, allow horizontal scroll for the dense cyber chart */
-@media (max-width: 720px) {
-  .cyber-chart .chart-stage {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .cyber-chart .chart-svg { min-width: 720px; }
-}
-
-/* ---------- Evidence citation block (end-of-section) ---------- */
-.evidence-citation {
-  display: block;
-  margin: 2rem 0 0;
-  padding: 1rem 1.25rem 1.1rem;
-  background: var(--surface-soft);
-  border-left: 2px solid var(--rule);
-  border-radius: 0 4px 4px 0;
-}
-.evidence-link {
-  margin: 0 0 0.4rem !important;
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.45;
-  color: var(--text-soft) !important;
-}
-.evidence-caption {
-  margin: 0 !important;
-  font-size: 0.85rem;
-  color: var(--muted) !important;
   line-height: 1.55;
 }
 
@@ -818,10 +759,15 @@ footer {
   .sn-ref { background: rgba(247, 129, 102, 0.1); }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 944px) {
   /* Hide sidebar nav on smaller screens */
   .timeline { display: none; }
-  main { padding-left: 1.5rem; padding-right: 1.5rem; }
+  main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 600px) {
