@@ -1,28 +1,117 @@
-// Scroll-spy: highlight active section in left timeline nav
+// Nav hamburger: expand/collapse panel + body.is-scrolled
 (function () {
-  const links = document.querySelectorAll('.timeline-list a');
+  const nav    = document.getElementById('site-nav');
+  const toggle = document.getElementById('nav-toggle');
+  const panel  = document.getElementById('nav-panel');
+  if (!nav || !toggle || !panel) return;
+
+  const SCROLL_THRESHOLD = 80;
+
+  function openPanel()  { nav.classList.add('is-open');    toggle.setAttribute('aria-expanded', 'true');  }
+  function closePanel() { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
+
+  toggle.addEventListener('click', () => {
+    nav.classList.contains('is-open') ? closePanel() : openPanel();
+  });
+
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
+
+  document.addEventListener('click', e => { if (!nav.contains(e.target)) closePanel(); });
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > SCROLL_THRESHOLD;
+    document.body.classList.toggle('is-scrolled', scrolled);
+    if (scrolled && nav.classList.contains('is-open')) closePanel();
+  }, { passive: true });
+})();
+
+// Scroll-spy: highlight active section + toggle body.in-section
+(function () {
+  const links    = document.querySelectorAll('.nav-list a');
   const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
 
   if (!('IntersectionObserver' in window)) return;
 
+  const intersecting = new Set();
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          links.forEach(a => {
-            a.classList.toggle('active', a.dataset.section === id);
-          });
-        }
+        if (entry.isIntersecting) intersecting.add(entry.target.id);
+        else intersecting.delete(entry.target.id);
       });
+      const activeId = [...intersecting].pop();
+      links.forEach(a => a.classList.toggle('active', a.dataset.section === activeId));
+      document.body.classList.toggle('in-section', !!activeId);
     },
-    {
-      rootMargin: '-30% 0px -55% 0px',
-      threshold: 0,
-    }
+    { rootMargin: '-30% 0px -55% 0px', threshold: 0 }
   );
 
   sections.forEach(s => s && observer.observe(s));
+})();
+
+// Hero fade: content dissolves as user scrolls into content
+(function () {
+  const heroInner = document.querySelector('.hero-inner');
+  if (!heroInner) return;
+
+  const hero = heroInner.closest('.hero');
+  let raf = null;
+
+  function update() {
+    const rect = hero.getBoundingClientRect();
+    const h    = hero.offsetHeight;
+    const raw      = -rect.top / h;
+    const progress = Math.max(0, Math.min(1, (raw - 0.35) / 0.40));
+    heroInner.style.opacity   = (1 - progress).toFixed(3);
+    heroInner.style.transform = `scale(${(1 - progress * 0.04).toFixed(4)})`;
+    heroInner.style.transformOrigin = 'center top';
+    raf = null;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!raf) raf = requestAnimationFrame(update);
+  }, { passive: true });
+
+  update();
+})();
+
+// Section scroll: rise-on-enter + fade-and-lift-on-depart
+(function () {
+  const allSections = Array.from(document.querySelectorAll('.scenario'));
+  if (!allSections.length) return;
+
+  const lastIdx = allSections.length - 1;
+  let raf = null;
+
+  function update() {
+    const vh = window.innerHeight;
+
+    allSections.forEach((section, i) => {
+      const rect  = section.getBoundingClientRect();
+      const isLast = i === lastIdx;
+
+      const enterRaw      = (vh - rect.top) / (vh * 0.7);
+      const enterProgress = Math.min(1, Math.max(0, enterRaw) * 3.0);
+      const enterY        = 100 * (1 - enterProgress);
+
+      const departRaw      = (0.65 - rect.bottom / vh) / 0.40;
+      const departProgress = isLast ? 0 : Math.max(0, Math.min(1, departRaw));
+      const departY        = -60 * departProgress;
+      const opacity        = isLast ? 1 : (1 - departProgress);
+
+      section.style.opacity   = opacity.toFixed(3);
+      section.style.transform = `translateY(${(enterY + departY).toFixed(2)}px)`;
+    });
+
+    raf = null;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!raf) raf = requestAnimationFrame(update);
+  }, { passive: true });
+
+  update();
 })();
 
 // Sidenote toggle for mobile (when sidenotes are collapsed inline)
