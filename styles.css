@@ -16,7 +16,7 @@
 
   --content-width: 1440px;
   --main-pad-top: 5rem;
-  --main-pad: 0.75rem;
+  --main-pad: 1.5rem;
 }
 
 * { box-sizing: border-box; }
@@ -182,6 +182,15 @@ body.is-scrolled .nav-label {
   box-shadow: 0 0 0 4px rgba(247, 129, 102, 0.25);
 }
 
+.nav-item--meta { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--rule-soft); }
+.nav-item--meta a {
+  font-size: 0.8rem;
+  color: var(--muted) !important;
+  background: none !important;
+  padding: 0.2rem 0.5rem !important;
+}
+.nav-item--meta a:hover { color: var(--text-soft) !important; }
+
 /* ---- State: scrolled → show toggle, hide panel ---- */
 body.is-scrolled .nav-toggle { display: flex; }
 body.is-scrolled .nav-panel { display: none; }
@@ -212,7 +221,7 @@ main {
 
 /* ---------- Hero ---------- */
 .hero {
-  max-width: 860px;
+  max-width: 1100px;
   min-height: calc(100vh - var(--main-pad-top));
   display: flex;
   flex-direction: column;
@@ -241,10 +250,33 @@ h1 {
   margin: 0 0 1.5rem;
 }
 .thesis {
-  font-size: 1rem;
-  color: var(--text-soft);
   margin: 0 0 2rem;
 }
+.thesis--with-list {
+  margin-bottom: 0.4rem;
+}
+.thesis-list {
+  margin: -0.5rem 0 2rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.thesis-list li {
+  line-height: 1.6;
+}
+.hero-about-link {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+.hero-about-link a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-soft);
+  transition: color 0.15s;
+}
+.hero-about-link a:hover { color: var(--text); }
 .hero-context {
   font-size: 0.85rem;
   color: var(--muted-2);
@@ -287,6 +319,9 @@ h1 {
   flex-shrink: 0;
 }
 .btn-icon svg { width: 100%; height: 100%; }
+
+.scenario-btn--meta .btn-icon { color: var(--muted); }
+.scenario-btn--meta:hover { border-color: var(--muted); }
 
 /* ---------- Scenario sections ---------- */
 .scenario {
@@ -427,7 +462,7 @@ h2 {
   margin: 0 0 0.5rem;
   color: var(--section-accent, var(--text));
 }
-.capabilities p { margin: 0; font-size: 0.97rem; color: var(--text-soft); }
+.capabilities p { margin: 0; font-size: 1.05rem; color: var(--text-soft); }
 
 /* "What this could look like" vignette */
 .vignette {
@@ -793,6 +828,49 @@ h2 {
 .chart-source a:hover { color: var(--text-soft); }
 
 /* ---------- Footer ---------- */
+.contributors-section {
+  padding: 4rem 0 2rem;
+  scroll-margin-top: 2rem;
+}
+.contributors-branding {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.contributors-branding p { margin: 0; }
+.ari-icon {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
+}
+.contributors-section h2 {
+  font-size: 2.1rem;
+  margin: 0 0 2rem;
+}
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.contributor-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+}
+.contributor-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+.contributor-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
 footer {
   margin-top: 5rem;
   padding-top: 2rem;

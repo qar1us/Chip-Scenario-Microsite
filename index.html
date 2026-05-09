@@ -39,6 +39,7 @@
         <li><a href="#cyber" data-section="cyber"><span class="dot"></span>Cyber Operations</a></li>
         <li><a href="#distillation" data-section="distillation"><span class="dot"></span>Distillation Attacks</a></li>
         <li><a href="#economic" data-section="economic"><span class="dot"></span>AI Stack</a></li>
+        <li class="nav-item--meta"><a href="#contributors" data-section="contributors">About</a></li>
       </ol>
     </div>
   </nav>
@@ -50,13 +51,19 @@
       <div class="hero-inner">
         <h1>Three Scenarios: How Chip Exports Reshape Economic Competition</h1>
         <p class="thesis">
-          Advanced AI chips power the cyber operations, model development, and AI infrastructure that will shape economic competition over the coming decades. Decisions about who has access to those chips carry significant economic consequences.
+          Advanced AI chips power the cyber operations, model development, and AI infrastructure that will shape economic competition over the coming decades. Decisions about who has access to those chips will have significant economic consequences.
         </p>
         <p class="thesis">
-          This site examines three mechanisms through which exporting advanced AI chips affects the U.S. economic position: cyber operations that enable industrial espionage against American firms, distillation attacks that extract intellectual property from frontier American models, and the buildout of a rival AI stack that competes with American products in global markets.
+          Exporting advanced AI chips to strategic competitors is not a neutral commercial decision. It strengthens our competitors&rsquo; AI industries and shifts the economic balance of the coming decades. American chip export policy should be made with these stakes clearly in view.
         </p>
+        <p class="thesis thesis--with-list">This site examines three mechanisms through which exporting advanced AI chips affects the U.S. economic position:</p>
+        <ul class="thesis-list">
+          <li>Cyber operations that enable industrial espionage against American firms.</li>
+          <li>Distillation attacks that extract intellectual property from frontier American models.</li>
+          <li>The buildout of a rival AI stack that competes with American products in global markets.</li>
+        </ul>
         <p class="thesis">
-          For each mechanism, we share a scenario: what happens when China&rsquo;s cyber operations, model development, and AI infrastructure deeply impact the U.S. economy, all on the back of American chips. These scenarios should not be interpreted as predictions, but real risks that U.S. policymakers must consider when making decisions about what advanced chips should be sold to China and what chips must be controlled.
+          For each mechanism, we share a scenario: what happens when China&rsquo;s cyber operations, model development, and AI infrastructure deeply impact the U.S. economy, all on the back of American chips. These scenarios should not be interpreted as predictions, but as real risks that U.S. policymakers must consider when making decisions about what advanced chips should be sold to China and what chips must be controlled.
         </p>
 
         <div class="hero-actions">
@@ -79,6 +86,7 @@
             <span>AI Stack</span>
           </a>
         </div>
+        <p class="hero-about-link"><a href="#contributors">About</a></p>
       </div>
     </header>
 
@@ -113,13 +121,13 @@
               <li>
                 <h3>Deploy AI systems against hardened targets</h3>
                 <p>
-                  Cyber task performance scales directly with inference compute (compute used to run the model and generate tokens). UKAISI evaluations found that increasing computational resources from 10 million to 100 million tokens <a href="https://www.aisi.gov.uk/blog/how-do-frontier-ai-agents-perform-in-multi-step-cyber-attack-scenarios" target="_blank" rel="noopener">improved autonomous attack performance</a> by up to 59%. <a href="https://static1.squarespace.com/static/64edf8e7f2b10d716b5ba0e1/t/69e12e9874e83a6c836164ef/1776365208126/Policy+Memo_+Mythos+and+the+Evolving+Cyber+Landscape.pdf" target="_blank" rel="noopener">Many critical capabilities</a>, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
+                  Cyber task performance scales directly with inference compute (compute used to run the model and generate tokens). UK AI Safety Institute evaluations found that increasing computational resources from 10 million to 100 million tokens <a href="https://www.aisi.gov.uk/blog/how-do-frontier-ai-agents-perform-in-multi-step-cyber-attack-scenarios" target="_blank" rel="noopener">improved autonomous attack performance</a> by up to 59%. <a href="https://static1.squarespace.com/static/64edf8e7f2b10d716b5ba0e1/t/69e12e9874e83a6c836164ef/1776365208126/Policy+Memo_+Mythos+and+the+Evolving+Cyber+Landscape.pdf" target="_blank" rel="noopener">Many critical capabilities</a>, such as discovering zero-day vulnerabilities, may be limited only by compute budgets.
                 </p>
               </li>
             </ul>
 
             <p>
-              A nation-state could use its large-scale compute to attack highly strategic and well-defended targets such as military networks, critical infrastructure, and the energy and financial sectors. Evaluations from the UK AI Security Institute show that model performance on simulated cyber attack scenarios improves with more compute.
+              A nation-state could use its large-scale compute to attack highly strategic and well-defended targets such as military networks, critical infrastructure, and the energy and financial sectors.
             </p>
           </div>
 
@@ -135,7 +143,7 @@
           <figure class="data-chart figure-image cyber-chart">
             <figcaption class="chart-title">Cyber capabilities and compute: completed steps in a cyberattack simulation per compute spent</figcaption>
             <p class="chart-subtitle">
-              Each line is a frontier model attempting a multi-step cyber-attack simulation. Performance scales with compute.
+              Evaluations from the UK AI Security Institute show that model performance on simulated cyber attack scenarios improves with more compute. Each line is a frontier model attempting a multi-step cyber-attack simulation.
             </p>
             <div class="chart-stage chart-stage-image">
               <img src="img/hacking-capabilities-dark.png"
@@ -159,7 +167,7 @@
           <span class="scenario-number">02</span>
           <span class="scenario-tag">Distillation Attacks</span>
         </div>
-        <h2>Compute as an Engine of Distillation Attacks and AI IP Theft</h2>
+        <h2>Compute as an Engine of Distillation Attacks</h2>
       </div>
       <div class="scenario-cols">
         <div class="scenario-col-text">
@@ -185,7 +193,7 @@
               </li>
               <li>
                 <h3>Refine distilled models to close the remaining gap</h3>
-                <p>Raw distillation outputs are a starting point, not a finished product. Post-training techniques such as compute-intensive reinforcement learning allow adversaries to further push a model toward a genuine competitor. Distillation attacks effectively subsidize some stages of the training pipeline, freeing up compute that can be redirected toward the other stages it does not substitute well for. Evidence from Epoch AI shows that the majority of an AI company&rsquo;s compute spend goes towards R&amp;D, which distillation attacks let competitors shortcut.</p>
+                <p>Raw distillation outputs are a starting point, not a finished product. Post-training techniques such as compute-intensive reinforcement learning allow adversaries to further push a model toward a genuine competitor. Distillation attacks effectively subsidize some stages of the training pipeline, freeing up compute that can be redirected toward the other stages it does not substitute well for.</p>
               </li>
             </ul>
           </div>
@@ -204,6 +212,7 @@
         <div class="scenario-col-visual">
           <figure class="compute-chart" id="compute-chart" aria-labelledby="cc-title">
             <figcaption class="chart-title" id="cc-title">U.S. AI companies annual compute spend</figcaption>
+            <p class="chart-subtitle">Evidence from Epoch AI shows that the majority of an AI company&rsquo;s compute spend goes towards R&amp;D, which distillation attacks let competitors shortcut.</p>
 
             <div class="chart-legend" aria-hidden="true">
               <div class="legend-group">
@@ -337,7 +346,7 @@
               <li>
                 <h3>Capture compute capacity that would otherwise serve American firms</h3>
                 <p>
-                  There is currently a <a href="https://ifp.org/ai-chip-supply-diversion/" target="_blank" rel="noopener">shortage</a> of advanced AI chips. U.S. <a href="https://www.reuters.com/business/google-parent-alphabet-forecasts-sharp-surge-2026-capital-spending-2026-02-04/" target="_blank" rel="noopener">AI</a> <a href="https://www.theinformation.com/newsletters/ai-agenda/anthropics-compute-crunch-strikes?rc=uwxivy" target="_blank" rel="noopener">companies</a> would like to scale up their compute, as would <a href="https://www.networkworld.com/article/2104516/high-bandwidth-memory-nearly-sold-out-until-2026.html" target="_blank" rel="noopener">many</a> startups and universities. But limits in key production inputs have led to a compute shortage. Nvidia <a href="https://www.cnbc.com/video/2026/02/06/nvidia-ceo-jensen-huang-ai-is-going-to-fundamentally-change-how-we-compute-everything.html" target="_blank" rel="noopener">claims</a> U.S. companies are losing revenue as a result of compute constraints. Chips exported are chips American firms cannot access. Analysis from Epoch AI finds that it takes an average of seven months for Chinese models to catch up to the capabilities of their U.S. counterparts.
+                  There is currently a <a href="https://ifp.org/ai-chip-supply-diversion/" target="_blank" rel="noopener">shortage</a> of advanced AI chips. U.S. <a href="https://www.reuters.com/business/google-parent-alphabet-forecasts-sharp-surge-2026-capital-spending-2026-02-04/" target="_blank" rel="noopener">AI</a> <a href="https://www.theinformation.com/newsletters/ai-agenda/anthropics-compute-crunch-strikes?rc=uwxivy" target="_blank" rel="noopener">companies</a> would like to scale up their compute, as would <a href="https://www.networkworld.com/article/2104516/high-bandwidth-memory-nearly-sold-out-until-2026.html" target="_blank" rel="noopener">many</a> startups and universities. But limits in key production inputs have led to a compute shortage. Nvidia <a href="https://www.cnbc.com/video/2026/02/06/nvidia-ceo-jensen-huang-ai-is-going-to-fundamentally-change-how-we-compute-everything.html" target="_blank" rel="noopener">claims</a> U.S. companies are losing revenue as a result of compute constraints. Chips exported are chips American firms cannot access.
                 </p>
               </li>
             </ul>
@@ -357,7 +366,7 @@
         <div class="scenario-col-visual">
           <figure class="data-chart eci-chart">
             <figcaption class="chart-title">Chinese AI models have lagged the U.S. frontier by ~7 months on average since 2023</figcaption>
-            <p class="chart-subtitle">Each step is a new frontier model release; line value is the model&rsquo;s score on Epoch&rsquo;s Capabilities Index (ECI). Higher is more capable.</p>
+            <p class="chart-subtitle">Analysis from Epoch AI finds that it takes an average of seven months for Chinese models to catch up to the capabilities of their U.S. counterparts.</p>
 
             <div class="chart-legend" aria-hidden="true">
               <span class="legend-item"><span class="legend-swatch swatch-us"></span>United States</span>
@@ -382,7 +391,7 @@
                   <text x="56" y="108" text-anchor="end" dy="0.32em">140</text>
                   <text x="56" y="55" text-anchor="end" dy="0.32em">150</text>
                 </g>
-                <text x="36" y="36" class="axis-title" text-anchor="start">ECI</text>
+                <text class="axis-title" transform="translate(16, 190) rotate(-90)" text-anchor="middle">Epoch Capabilities Index (ECI)</text>
 
                 <path class="step-line us-line"
                       d="M 87 183 L 250 183 L 250 179 L 268 179 L 268 175 L 284 175 L 284 169 L 290 169 L 290 148 L 341 148 L 341 126 L 385 126 L 385 95 L 438 95 L 438 86 L 441 86 L 441 71 L 467 71 L 467 61 L 494 61 L 494 54 L 522 54 L 522 52 L 542 52 L 542 32"/>
@@ -439,15 +448,24 @@
             </div>
 
             <p class="chart-source">
-              Source: <a href="https://epoch.ai/data-insights/us-vs-china-eci" target="_blank" rel="noopener">Epoch AI</a>. ECI = Epoch Capabilities Index. Since 2023, Chinese models have trailed U.S. capabilities by 4&ndash;14 months.
+              Source: <a href="https://epoch.ai/data-insights/us-vs-china-eci" target="_blank" rel="noopener">Epoch AI</a>.
             </p>
           </figure>
         </div>
       </div>
     </section>
 
+    <!-- About -->
+    <section id="contributors" class="contributors-section">
+      <h2>About</h2>
+      <div class="contributors-branding">
+        <img src="img/ari-icon.png" alt="Americans for Responsible Innovation" class="ari-icon"/>
+        <p>This site was produced by <a href="https://ari.us/" target="_blank" rel="noopener">Americans for Responsible Innovation</a>.</p>
+      </div>
+    </section>
+
     <footer>
-      <p>About and contributors page coming soon.</p>
+      <p>&copy; 2026</p>
     </footer>
 
   </main>
